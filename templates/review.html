@@ -1,0 +1,18 @@
+{% extends 'layout/layout.html' %}
+{% block main %}
+    <form action='review' enctype="multipart/form-data" method='post'>
+    <input type='file' name='file' data-filename-placement="inside"/>
+    <button type='submit'  class="btn btn-primary">审核</button></br>
+    <textarea name='content' data-provide="markdown" rows="10"></textarea></br>
+    <!--button type='submit' name='content' class="btn btn-primary">审核</button></br-->
+  </form> 
+       <ul>
+          {%for i in items%}
+             <li>{{escape(i)}}</li>
+          {%end%}
+       </ul>
+<script>$(document).ready(function(){$('input[type=file]').bootstrapFileInput();});</script>
+{% end %}
+{% block siderbar_right %}
+<p>ready for file success and send to qa</p>
+{% end %}

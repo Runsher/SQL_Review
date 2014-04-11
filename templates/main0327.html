@@ -1,0 +1,16 @@
+{% include "layout/top.html" %}
+<body>
+	{% include "layout/header.html" %}
+	<div class="container-fluid">
+		<div class="row-fluid">
+			<div class="span3">
+				{% include "layout/siderbar.html" %} 
+			</div>
+			<div  class="span9">
+				{% block main %}{% end %}
+			</div>
+		</div>
+	</div>
+<!--{% include "layout/footer.html" %}-->
+</body>
+</html>
