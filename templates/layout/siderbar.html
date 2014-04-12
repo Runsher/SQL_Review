@@ -1,3 +1,28 @@
+<!--script type="text/javascript">
+function loadReview()
+{
+var xmlhttp;
+if (window.XMLHttpRequest)
+  {// code for IE7+, Firefox, Chrome, Opera, Safari
+  xmlhttp=new XMLHttpRequest();
+  }
+else
+ {// code for IE6, IE5
+  xmlhttp=new ActiveXObject("Microsoft.XMLHTTP");
+  }
+xmlhttp.onreadystatechange=function()
+  {
+  if (xmlhttp.readyState==4 && xmlhttp.status==200)
+    {
+    document.getElementById("test").innerHTML=xmlhttp.responseText;
+    }
+  }
+alert(location.href);
+//alert(document.URL);
+xmlhttp.open("GET","a",true);
+xmlhttp.send();
+}
+</script-->
 <section id="l-sidebar">
 <form name="modulo" class="sidebar-form" action="search">
 	<input type="hidden" id="sort_by" value="date">
@@ -10,9 +35,9 @@
 			</div>
 			<div id="collapseTwo" class="accordion-body collapse in">
 				<div class="accordion-inner clearfix">
-					<input type="checkbox" id="cb12" name="ecommerce" value="1">
 					<label for="cb12" class="checkbox field">
 						<a href="/review"><strong>SQL在线审核</strong></a>
+						<!--button onclick="loadReview()"><strong>SQL在线审核</strong></button-->
 					</label>     
 				</div>   
 				<div class="accordion-inner clearfix">
