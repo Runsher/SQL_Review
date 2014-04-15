@@ -41,13 +41,13 @@ class ReviewPart():
                         MySQL.MysqlQuery().query_update('insert into DB_REVIEW_CONTROL.tb_review_result(tb_name,result) values("%s","%s") ' %(tb,result))
                 if tb_info[0][20] != "":
                         pass;
-                tb_key_info = MySQL.MysqlQuery().query_select('select * from  information_schema.KEY_COLUMN_USAGE where table_schema="%s" and table_name="%s" limit 1' %(db,tb))
-                if tb_key_info:
-                         if  tb_key_info[0][2] == "PRIMARY":
-                                pass;
-                else:
-                        result = "表 %s 没有主键，请添加" %(tb)
-                        MySQL.MysqlQuery().query_update('insert into DB_REVIEW_CONTROL.tb_review_result(tb_name,result) values("%s","%s")' %(tb,result))
+#                tb_key_info = MySQL.MysqlQuery().query_select('select * from  information_schema.KEY_COLUMN_USAGE where table_schema="%s" and table_name="%s" limit 1' %(db,tb))
+#                if tb_key_info:
+#                         if  tb_key_info[0][2] == "PRIMARY":
+#                                pass;
+#                else:
+#                        result = "表 %s 没有主键，请添加" %(tb)
+#                        MySQL.MysqlQuery().query_update('insert into DB_REVIEW_CONTROL.tb_review_result(tb_name,result) values("%s","%s")' %(tb,result))
                 if tb_info[0][4] == "InnoDB":
                         pass;
                 else:

@@ -13,6 +13,7 @@ reload(sys)
 sys.setdefaultencoding("utf8")
 
 info = []
+review_status = 0
 
 class LoadAndClean():
 	def find_Load(self):
@@ -39,42 +40,11 @@ class LoadAndClean():
 
 class Review(tornado.web.RequestHandler):
 	def get(self):
-		self.render('review.html',title='result_test',items=info)
-
-	def review(info,filemetas):
-		for meta in file_metas:
-			info = []
-			filename = meta['filename']
-			filepath = os.path.join(upload_path,filename)
-                        with open(filepath,'wb') as up:
-                           	up.write(meta['body'])
-                     	LoadAndClean().find_Load()
-                      	max_id = MySQL.MysqlQuery().query_select('select max(id) from DB_REVIEW_CONTROL.tb_review_result')[0][0]
-                      	tb_name = MySQL.MysqlQuery().query_select('show tables from %s' %(MySQL.db))
-                      	if tb_name:
-                          	for tb_tup in tb_name:
-                                    	tb = "".join(tuple(tb_tup))
-                                      	ReviewPart.ReviewPart().review_table(MySQL.db,tb)
-                                    	ReviewPart.ReviewPart().review_column(MySQL.db,tb)
-                             	rs_info = MySQL.MysqlQuery().query_select('select result from DB_REVIEW_CONTROL.tb_review_result where id > %s' %(max_id))
-                               	if rs_info:
-                                   	for rs in rs_info:
-                                         	info.append(rs[0])
-                              	else:
-                                    	info = ['审核成功，sql无错']
-                     	else:
-                           	info = ["加载失败，SQL语法错误"]
-                     	try:
-                            	for tb_del in tb_name:
-                                    	LoadAndClean().del_tmp_file(tb_del[0])
-                     	except Exception,ex:
-                              	print Exception,ex
-		
-
-
+		self.render('review.html',title='result_test',items=info,status=review_status)
 
 
 	def post(self):
+		review_status_info = 0
                 upload_path = os.path.join(os.path.dirname(__file__),'../tmp')  
 		info = []
 		try:
@@ -99,11 +69,14 @@ class Review(tornado.web.RequestHandler):
                                                 for rs in rs_info:
                                                         info.append(rs[0])
                                         else:
-                                                info = ['审核成功，sql无错']
+                                         #       info = ['审核成功，sql无错']
+						review_status = 1
                                 else:
-                                        info = ["加载失败，SQL语法错误"]
+                                        #info = ["加载失败，SQL语法错误"]
+					review_status = 3
 			else:
-				info = ['未上传或粘贴需要审核的SQL']
+				#info = ['未上传或粘贴需要审核的SQL']
+				review_status = 4
                       	try:
                           	for tb_del in tb_name:
                                    	LoadAndClean().del_tmp_file(tb_del[0])
@@ -123,19 +96,24 @@ class Review(tornado.web.RequestHandler):
 						tb = "".join(tuple(tb_tup))
 						ReviewPart.ReviewPart().review_table(MySQL.db,tb)
 						ReviewPart.ReviewPart().review_column(MySQL.db,tb)	
-					rs_info = MySQL.MysqlQuery().query_select('select result from DB_REVIEW_CONTROL.tb_review_result where id > %s' %(max_id))
+					rs_info = MySQL.MysqlQuery().query_select('select tb_name,result from DB_REVIEW_CONTROL.tb_review_result where id > %s' %(max_id))
+					print rs_info
 					if rs_info:
 						for rs in rs_info:
 							info.append(rs[0])
+						review_status = 2
+						print info
 					else:
-						info = ['审核成功，sql无错']
+						#info = ['审核成功，sql无错']
+						review_status = 1
 				else:
-					info = ["加载失败，SQL语法错误"]
+					#info = ["加载失败，SQL语法错误"]
+					review_status = 3
 			try:
 				for tb_del in tb_name:
 					LoadAndClean().del_tmp_file(tb_del[0])
 			except Exception,ex:
                        		print Exception,ex
-		self.render('review.html',title='result_test',items=info)
+		self.render('review.html',title='result_test',items=info,status=review_status)
 		info = []
 		

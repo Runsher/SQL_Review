@@ -1,0 +1,117 @@
+.navbar {
+margin-bottom: 10px;
+border-radius: 0px;
+}
+.navbar-default {
+background-color: #058883;
+border-color: #ffffff;
+}
+.navbar-default .navbar-brand {
+color: #090909;
+}
+.navbar-brand {
+padding: 15px 45px;
+}
+.navbar-default .navbar-nav>li>a {
+color: #030303;
+}
+.navbar-default .navbar-nav>.open>a, .navbar-default .navbar-nav>.open>a:hover, .navbar-default .navbar-nav>.open>a:focus {
+background-color: #12BDA8;
+}
+.navbar-header {
+padding-right: 0px;
+padding-left: 0px;
+border-radius: 0px;
+}
+.navbar-nav.navbar-right:last-child {
+margin-right: 12px;
+}
+media="screen"
+a.accordion-toggle {
+letter-spacing: .05em;
+font-size: 13px;
+-webkit-border-radius: 2px;
+-moz-border-radius: 2px;
+border-radius: 2px;
+cursor: pointer;
+background-color: #058883;
+}
+
+media="screen"
+.accordion {
+padding-bottom: 10px;
+margin-bottom: 10px;
+background: url("../img/normal-bar.png") repeat-x bottom left;
+}
+.accordion-group, .accordion-button.first {
+margin-bottom: 4px;
+}
+.accordion-heading {
+position: relative;
+}
+.accordion-heading .accordion-toggle {
+display: block;
+padding: 10px 15px;
+line-height: 20px;
+}
+a.accordion-toggle {
+letter-spacing: .05em;
+font-size: 13px;
+-webkit-border-radius: 2px;
+-moz-border-radius: 2px;
+border-radius: 2px;
+cursor: pointer;
+background-color: #058883;
+}
+.accordion-heading a {
+color: #505459;
+text-decoration: none;
+}
+
+#l-sidebar {
+padding-top: 25px;
+}
+.accordion-toggle:after {
+position: absolute;
+top: 13px;
+right: 15px;
+width: 12px;
+height: 12px;
+content: "";
+}
+a.accordion-toggle:hover {
+background-color: #FF6B45;
+-webkit-transition: .1s linear;
+-moz-transition: .1s linear;
+-o-transition: .1s linear;
+transition: .1s linear;
+}
+.boxshadow {
+-webkit-box-shadow: 0 1px 1px rgba(0, 0, 0, 0.1);
+-moz-box-shadow: 0 1px 1px rgba(0, 0, 0, 0.1);
+box-shadow: 0 1px 1px rgba(0, 0, 0, 0.1);
+}
+
+.collapse {
+position: relative;
+overflow: hidden;
+height: 0;
+-webkit-transition: height .35s ease;
+-moz-transition: height .35s ease;
+-o-transition: height .35s ease;
+transition: height .35s ease;
+}
+.accordion-body {
+font-size: 11px;
+background-color: #fff;
+-webkit-border-radius: 0 0 2px 2px;
+-moz-border-radius: 0 0 2px 2px;
+border-radius: 0 0 2px 2px;
+}
+.field {
+color: #7F868F;
+padding: 9px 0;
+margin: 0 15px;
+font-size: 11px;
+border-bottom: 1px solid #E4E4E4;
+}

@@ -1,78 +1,11 @@
-<!--script type="text/javascript">
-function loadReview()
-{
-var xmlhttp;
-if (window.XMLHttpRequest)
-  {// code for IE7+, Firefox, Chrome, Opera, Safari
-  xmlhttp=new XMLHttpRequest();
-  }
-else
- {// code for IE6, IE5
-  xmlhttp=new ActiveXObject("Microsoft.XMLHTTP");
-  }
-xmlhttp.onreadystatechange=function()
-  {
-  if (xmlhttp.readyState==4 && xmlhttp.status==200)
-    {
-    document.getElementById("test").innerHTML=xmlhttp.responseText;
-    }
-  }
-alert(location.href);
-//alert(document.URL);
-xmlhttp.open("GET","a",true);
-xmlhttp.send();
-}
-</script-->
-<section id="l-sidebar">
-<form name="modulo" class="sidebar-form" action="search">
-	<input type="hidden" id="sort_by" value="date">
-	<input type="hidden" id="sort_data" value="DESC">
-	<input type="hidden" id="pag" value="1">
-	<div class="accordion" id="accordion2">
-		<div class="accordion-group boxshadow">
-			<div class="accordion-heading">
-				<a class="accordion-toggle expanded" data-toggle="collapse" data-target="#collapseTwo" href="#">数据库在线业务支持</a>
-			</div>
-			<div id="collapseTwo" class="accordion-body collapse in">
-				<div class="accordion-inner clearfix">
-					<label for="cb12" class="checkbox field">
-						<a href="/review"><strong>SQL在线审核</strong></a>
-						<!--button onclick="loadReview()"><strong>SQL在线审核</strong></button-->
-					</label>     
-				</div>   
-				<div class="accordion-inner clearfix">
-					<input type="checkbox" id="cb12" name="ecommerce" value="1">
-					<label for="cb12" class="checkbox field">
-						<a href="#"><strong>DB&SQL规范</strong></a>
-					</label>     
-				</div> 
-				<div class="accordion-inner clearfix">
-					<input type="checkbox" id="cb13" name="community" value="1">
-					<label for="cb13" class="checkbox field">
-						<a href="#"><strong>SQL-MAP在线提交</strong></a>
-					</label>
-				</div>
-				<div class="accordion-inner clearfix">
-					<input type="checkbox" id="cb14" name="forum" value="1">
-					<label for="cb14" class="checkbox field">
-						<a href="#"><strong>FORUM</strong></a>
-					</label>
-				</div>
-			</div> 
-		</div>
-		<div class="accordion-group">
-			<div class="accordion-heading">
-				<a class="accordion-toggle " data-toggle="collapse" data-target="#collapseOne" href="#">统计分析平台</a>
-			</div>
-			<div id="collapseOne" class="accordion-body collapse">
-				<div class="accordion-inner clearfix">
-					<input type="checkbox" id="cb1" name="wordpress" value="1">
-					<label for="cb1" class="checkbox field">
-						<strong>实例与业务</strong> <span id="objN1"></span><span class="chbx"></span>
-					</label>
-				</div>
-			</div>
-		</div>
-	</div>
-</form>
-</section>
+<div class="btn-group btn-group-justified message">
+  	<button type="button" class="btn btn-danger">Error&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="badge pull-right">0</span></button>
+   	<button type="button" class="btn btn-warning">Warning&nbsp;&nbsp;<span class="badge pull-right">2</span></button>
+	<button type="button" class="btn btn-info">Message<span class="badge pull-right">4</span></button>
+</div>
+<ul class="nav nav-pills nav-stacked">
+  	<li class="active"><a href="/">首页</a></li>
+  	<li><a href="/review">SQL在线审核</a></li>
+  	<li><a href="/rule">SQL_MAP在线提交</a></li>
+  	<li><a href="/rule">Demo</a></li>
+</ul>

@@ -1,0 +1,64 @@
+<!--script type="text/javascript">
+function loadReview()
+{
+var xmlhttp;
+if (window.XMLHttpRequest)
+  {// code for IE7+, Firefox, Chrome, Opera, Safari
+  xmlhttp=new XMLHttpRequest();
+  }
+else
+ {// code for IE6, IE5
+  xmlhttp=new ActiveXObject("Microsoft.XMLHTTP");
+  }
+xmlhttp.onreadystatechange=function()
+  {
+  if (xmlhttp.readyState==4 && xmlhttp.status==200)
+    {
+    document.getElementById("test").innerHTML=xmlhttp.responseText;
+    }
+  }
+alert(location.href);
+//alert(document.URL);
+xmlhttp.open("GET","a",true);
+xmlhttp.send();
+}
+</script-->
+<section id="l-sidebar">
+<form name="modulo" class="sidebar-form" action="search">
+	<input type="hidden" id="sort_by" value="date">
+	<input type="hidden" id="sort_data" value="DESC">
+	<input type="hidden" id="pag" value="1">
+	<div class="accordion" id="accordion2">
+		<div class="accordion-group boxshadow">
+			<div class="accordion-heading">
+				<a class="accordion-toggle expanded" data-toggle="collapse" data-target="#collapseTwo" href="#">数据库在线业务支持</a>
+			</div>
+			<div id="collapseTwo" class="accordion-body collapse in">
+				<div class="accordion-inner clearfix">
+						<a href="/review"><strong>SQL在线审核</strong></a>
+						<!--button onclick="loadReview()"><strong>SQL在线审核</strong></button-->
+				</div>   
+				<div class="accordion-inner clearfix">
+						<a href="/rule.html"><strong>DB&SQL规范</strong></a>
+				</div> 
+				<div class="accordion-inner clearfix">
+						<a href="#"><strong>SQL-MAP在线提交</strong></a>
+				</div>
+				<div class="accordion-inner clearfix">
+						<a href="#"><strong>FORUM</strong></a>
+				</div>
+			</div> 
+		</div>
+		<div class="accordion-group">
+			<div class="accordion-heading">
+				<a class="accordion-toggle " data-toggle="collapse" data-target="#collapseOne" href="#">统计分析平台</a>
+			</div>
+			<div id="collapseOne" class="accordion-body collapse">
+				<div class="accordion-inner clearfix">
+						<strong>实例与业务</strong> <span id="objN1"></span><span class="chbx"></span>
+				</div>
+			</div>
+		</div>
+	</div>
+</form>
+</section>
