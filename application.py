@@ -9,6 +9,7 @@ import os
 import Home
 import Upload
 import Review
+import Rule
 
 from tornado.options import define, options
 define("port", default = 3000, help = "run on the given port", type = int)
@@ -27,8 +28,8 @@ if __name__ == '__main__':
 	app=tornado.web.Application(
         	handlers=[
                 	(r'/',Home.IndexHandler),
-#                	(r'/review',Review.UploadFileHandler),
                 	(r'/review',Review.Review),
+                	(r'/rule',Rule.Rule),
                 	],**settings
         	)
 

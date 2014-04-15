@@ -1,0 +1,200 @@
+{% extends 'layout/layout.html' %}
+</script>
+{% block siderbar %}
+<ul class="nav nav-pills nav-stacked">
+	<li><a href="/">首页</a></li>
+  	<li><a href="/review">SQL在线审核</a></li>
+  	<li class="active"><a href="#">规则与规范</a></li>
+  	<li><a href="#">SQL_MAP在线提交</a></li>
+  	<li><a href="#">Demo</a></li>
+</ul>
+{% end %}
+{% block main %}
+
+<form class="form-horizontal rule">
+    	<fieldset>
+      		<div id="legend" class="">
+        		<legend class="">定义表规则</legend>
+      		</div>
+    		<div class="col-md-4 panel panel-default">
+          		<div class="panel-heading">选择存储引擎</div>
+          <!-- Multiple Checkboxes -->
+          		<div class="panel-body">
+      <!-- Inline Checkboxes -->
+      				<label class="checkbox inline">
+        				<input type="checkbox" value="InnoDB">
+        				InnoDB
+      				</label>
+      				<label class="checkbox inline">
+        				<input type="checkbox" value="MyIsam">
+        				MyIsam
+      				</label>
+  			</div>
+        	</div>
+    
+
+    		<div class="control-groupi col-md-4">
+          <label class="control-label">选择字符集</label>
+
+          <!-- Multiple Checkboxes -->
+          <div class="controls">
+      <!-- Inline Checkboxes -->
+      <label class="checkbox inline">
+        <input type="checkbox" value="utf-8">
+        utf-8
+      </label>
+      <label class="checkbox inline">
+        <input type="checkbox" value="gbk">
+        gbk
+      </label>
+      <label class="checkbox inline">
+        <input type="checkbox" value="laitin">
+        laitin
+      </label>
+  </div>
+
+        </div><div class="control-group col-md-4">
+          <label class="control-label">字符校验规则</label>
+
+          <!-- Multiple Checkboxes -->
+          <div class="controls">
+      <!-- Inline Checkboxes -->
+      <label class="checkbox inline">
+        <input type="checkbox" value="utf8-unicode">
+        utf8-unicode
+      </label>
+      <label class="checkbox inline">
+        <input type="checkbox" value="utf8-bin">
+        utf8-bin
+      </label>
+      <label class="checkbox inline">
+        <input type="checkbox" value="utf8-generic">
+        utf8-generic
+      </label>
+      <label class="checkbox inline">
+        <input type="checkbox" value="gbk">
+        gbk
+      </label>
+      <label class="checkbox inline">
+        <input type="checkbox" value="..">
+        ..
+      </label>
+  </div>
+
+        </div><div class="control-group col-md-4">
+          <label class="control-label">是否有主键</label>
+          <div class="controls">
+      <!-- Inline Radios -->
+      <label class="radio inline">
+        <input type="radio" value="必须有" name="key_status" checked="checked">
+        必须有
+      </label>
+      <label class="radio inline">
+        <input type="radio" value="建议有" name="key_status">
+        建议有
+      </label>
+      <label class="radio inline">
+        <input type="radio" value="不要求" name="key_status">
+        不要求
+      </label>
+  </div>
+        </div>
+    
+
+    <div class="control-group col-md-4">
+          <label class="control-label">表注释</label>
+          <div class="controls">
+      <!-- Inline Radios -->
+      <label class="radio inline">
+        <input type="radio" value="必须有" name="com_status" checked="checked">
+        必须有
+      </label>
+      <label class="radio inline">
+        <input type="radio" value="建议有" name="com_status">
+        建议有
+      </label>
+      <label class="radio inline">
+        <input type="radio" value="不要求" name="com_status">
+        不要求
+      </label>
+  </div>
+        </div><div class="control-group col-md-4">
+          <label class="control-label">主键字段类型</label>
+
+          <!-- Multiple Checkboxes -->
+          <div class="controls">
+      <!-- Inline Checkboxes -->
+      <label class="checkbox inline">
+        <input type="checkbox" value="INT">
+        INT
+      </label>
+      <label class="checkbox inline">
+        <input type="checkbox" value="BIGINT">
+        BIGINT
+      </label>
+      <label class="checkbox inline">
+        <input type="checkbox" value="不要求">
+        不要求
+      </label>
+  </div>
+
+        </div>
+
+    <div class="control-group col-md-4">
+          <label class="control-label">特殊字段</label>
+          <div class="controls">
+      <!-- Multiple Radios -->
+      <label class="radio">
+        <input type="radio" value="必须有" name="col_status" checked="checked">
+        必须有
+      </label>
+      <label class="radio">
+        <input type="radio" value="建议有" name="col_status">
+        建议有
+      </label>
+      <label class="radio">
+        <input type="radio" value="不要求" name="col_status">
+        不要求
+      </label>
+  </div>
+
+        </div>
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    <div class="control-group col-md-4">
+
+          <!-- Text input-->
+          <label class="control-label" for="input01">特殊字段1</label>
+          <div class="controls">
+            <input type="text" placeholder="关键字" class="input-xlarge">
+            <p class="help-block"></p>
+          </div>
+        </div>
+
+    <div class="control-group col-md-4">
+
+          <!-- Text input-->
+          <label class="control-label" for="input01">特殊字段2</label>
+          <div class="controls">
+            <input type="text" placeholder="关键字" class="input-xlarge">
+            <p class="help-block"></p>
+          </div>
+        </div>
+
+    </fieldset>
+  </form>
+<script>$(document).ready(function(){$('input[type=file]').bootstrapFileInput();});</script>
+{% end %}
+{% block siderbar_right %}
+{% end %}

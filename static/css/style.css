@@ -26,18 +26,26 @@ margin-bottom: 14px;
 }
 .message .btn-danger {
 width: 33.333%;
-font-size: 6px;
+font-size: 10px;
 }
 .message .btn-warning {
 width: 33.333%;
-font-size: 6px;
+font-size: 10px;
 }
 .message .btn-info {
 width: 33.333%;
-font-size: 6px;
+font-size: 10px;
 }
 .message .badge {
 padding: 3px 2px;
+}
+.message small, .small {
+float: left;
+padding-left: 8px;
+font-size: 12px;
+}
+.message .pull-right {
+margin-right: 8px;
 }
 .btn-group, .btn-group-vertical {
 vertical-align:baseline;
@@ -58,6 +66,9 @@ border-color: #C9C9C9;
 .siderbar .nav-pills>li>a {
 border-radius: 1px;
 }
+.siderbar .nav>li>a {
+padding: 7px 15px;
+}
 
 .review-info {
 padding-right:0px;
@@ -65,7 +76,7 @@ padding-left:0px;
 padding-top: 6px;
 }
 .review-info .btn {
-font-size: 10px;
+font-size: 11px;
 padding: 6.5px 12px;
 }
 .review-info .col-sm-6 {
@@ -84,7 +95,7 @@ margin-bottom: 8px;
 padding-left: 0px;
 }
 .review-result {
-font-size: 10px;
+font-size: 12px;
 margin-top: 12px;
 }
 .review-result .table-bordered {
@@ -92,4 +103,34 @@ margin-top: 12px;
 }
 .review-result .body {
 font-size: 10px;
+}
+.rule {
+font-size: 12px;
+padding-right: 15px;
+padding-left: 15px;
+}
+.rule .tap {
+padding-right: 8px;
+padding-left: 0px; 
+}
+
+.rule .panel-default {
+padding-right: 0px;
+padding-left: 0px;
+max-height: 154px;
+//max-width: 228px;
+//margin-right: 10px;
+min-height: 154px;
+}
+.rule .panel-heading {
+padding: 5px 15px;
+}
+.rule .panel-body {
+padding-left: 15px;
+padding-top: 10px;
+max-height: 112px;
+overflow: auto;
+}
+.rule .panel-default>.panel-heading {
+background-color: #1DAA8E;
 }

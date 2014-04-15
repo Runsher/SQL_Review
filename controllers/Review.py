@@ -69,13 +69,10 @@ class Review(tornado.web.RequestHandler):
                                                 for rs in rs_info:
                                                         info.append(rs[0])
                                         else:
-                                         #       info = ['审核成功，sql无错']
 						review_status = 1
                                 else:
-                                        #info = ["加载失败，SQL语法错误"]
 					review_status = 3
 			else:
-				#info = ['未上传或粘贴需要审核的SQL']
 				review_status = 4
                       	try:
                           	for tb_del in tb_name:
@@ -97,17 +94,12 @@ class Review(tornado.web.RequestHandler):
 						ReviewPart.ReviewPart().review_table(MySQL.db,tb)
 						ReviewPart.ReviewPart().review_column(MySQL.db,tb)	
 					rs_info = MySQL.MysqlQuery().query_select('select tb_name,result from DB_REVIEW_CONTROL.tb_review_result where id > %s' %(max_id))
-					print rs_info
 					if rs_info:
-						for rs in rs_info:
-							info.append(rs[0])
 						review_status = 2
-						print info
+						info = rs_info
 					else:
-						#info = ['审核成功，sql无错']
 						review_status = 1
 				else:
-					#info = ["加载失败，SQL语法错误"]
 					review_status = 3
 			try:
 				for tb_del in tb_name:
