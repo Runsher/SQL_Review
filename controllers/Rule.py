@@ -1,4 +1,6 @@
 #coding:utf-8
+import time
+import datetime
 import tornado.web
 import tornado.ioloop
 import re
@@ -10,13 +12,21 @@ sys.setdefaultencoding("utf8")
 
 info = []
 ruleList = []
+ruleNames = ''
 
 class Rule(tornado.web.RequestHandler):
         def get(self):
+		ruleNames = RulePart.RulePart().getRules()
+		self.render('rule.html',title='rule',items=info,ruleList=ruleNames)
+        def post(self):
 		tb_dict = {}
-		engine,collation,key_status,com_status,key_type=['None'],['None'],['0'],['0'],['0']
+		engine,charset,collation,key_status,com_status,key_type=['None'],['None'],['0'],['0'],['0']
 		try:
 			engine = self.request.arguments["engine"]
+		except Exception,ex:
+			print Exception,ex	
+		try:
+			charset = self.request.arguments["charset"]
 		except Exception,ex:
 			print Exception,ex	
 		try:
@@ -37,17 +47,17 @@ class Rule(tornado.web.RequestHandler):
                         print Exception,ex
 		#print engine,collation,key_status,com_status,key_type
 		try:
-			tb_dict = dict((['engine',engine[0]],['collation',collation[0]],['com_status',com_status[0]],['key_status',key_status[0]],['key_type',key_type[0]]))
+			tb_dict = dict((['engine',engine[0]],['charset',charset[0]],['collation',collation[0]],['com_status',com_status[0]],['key_status',key_status[0]],['key_type',key_type[0]]))
 		except Exception,ex:
 			print Exception,ex
-		rule_name = 'rule'
+		now = time.localtime()
+		str_now = time.strftime("%Y%m%d%H%M%S", now )
+		rule_name = 'TableRule'+str_now
 		RulePart.RulePart().handlerRules(rule_name,tb_dict)
 		ruleNames = RulePart.RulePart().getRules()
 		print ruleNames
 		self.render('rule.html',title='rule',items=info,ruleList=ruleNames)
 
 
-        def post(self):
-		pass;
 #		info = ['a','b','c']
 #		self.render('rule.html',title='rule',items=info)

@@ -27,14 +27,16 @@ $('#myTab a').click(function (e) {
 </ul>
 <div class="tab-content">
   	<div class="tab-pane fade in  active" id="ruleList">
+		<div class='rule'>
 		<ul class="list-group">
-		{% for i in ruleList %}
-  			<li class="list-group-item">{{escape(i)}}</li>
+		{% for i,j,k in ruleList %}
+  			<li class="list-group-item">规则名称--{{escape(i)}} 创建时间--{{escape(j)}} 更新时间--{{escape(k)}}</li>
 		{% end %}
 		</ul>
+		</div>
 	</div>
   	<div class="tab-pane fade" id="tbRule">
-		<form action="#" class="form-horizontal rule">
+		<form id="ruleForm" action="#" class="form-horizontal rule" method='post'>
     	<fieldset>
 		<div  class="col-xs-12 col-sm-6 col-md-4 tap">
     			<div class=" panel panel-default">
@@ -202,7 +204,7 @@ $('#myTab a').click(function (e) {
         	</div>
 		</div-->
     	</fieldset>	
-<button type='submit' data-loading-text="正在保存..."  class="btn btn-success">提交</button>
+<button onclick="formSubmit()" data-loading-text="正在保存..."  class="btn btn-success">提交</button>
 </form>
 </div>
   <div class="tab-pane fade" id="messages">...</div>

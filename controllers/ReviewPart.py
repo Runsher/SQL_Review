@@ -7,6 +7,8 @@ import os
 import re
 import ConfigParser
 import MySQL
+import RulePart
+
 reload(sys)
 sys.setdefaultencoding("utf8")
 
@@ -15,6 +17,7 @@ class ReviewPart():
 
         def review_table(self,db,tb):
                 # Table Rules
+		tabelRules = RulePart.RulePart().getRulesTails()
                 tb_info = MySQL.MysqlQuery().query_select('select * from information_schema.TABLES where table_schema="%s" and table_name="%s" ' %(db,tb))
                 tb_key_info = MySQL.MysqlQuery().query_select('select * from  information_schema.KEY_COLUMN_USAGE where table_schema="%s" and table_name="%s" limit 1' %(db,tb))
                 if tb_key_info:
