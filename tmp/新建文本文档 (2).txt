@@ -1,0 +1,12 @@
+                                        {%for i,j in items%}
+                                        <tbody>
+                                                <td>
+                                                        <a>{{escape(i)}}</a>
+                                                </td>
+                                                <td>column name</td>
+                                                <td class="hidden-480">{{escape(j)}}</td>
+                                                <td class="hidden-480">
+                                                        <span class="label label-sm label-warning">Warning</span>
+                                                </td>
+                                        </tbody>
+                                        {%end%}

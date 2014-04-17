@@ -4,24 +4,39 @@
 <ul class="nav nav-pills nav-stacked">
 	<li><a href="/">首页</a></li>
   	<li><a href="/review">SQL在线审核</a></li>
-  	<li class="active"><a href="#">规则与规范</a></li>
+  	<li class="active"><a href="/rule">规则与规范</a></li>
   	<li><a href="#">SQL_MAP在线提交</a></li>
   	<li><a href="#">Demo</a></li>
 </ul>
 {% end %}
 {% block main %}
-<ul class="nav nav-tabs">
-  <li><a href="#profile" data-toggle="tab">规则列表</a></li>
-  <li><a href="#tb_rule" data-toggle="tab">定义表规则</a></li>
-  <li><a href="#messages" data-toggle="tab">定义字段规则</a></li>
-  <li><a href="#settings" data-toggle="tab">额外规则</a></li>
+<script>
+//$(document).ready(function(){
+//$('#myTab a[href="#tb_rule"]').tab('show')
+//})
+$('#myTab a').click(function (e) {
+  e.preventDefault()
+  $(this).tab('show')
+})
+</script>
+<ul id= "myTab" class="nav nav-tabs">
+  	<li><a href="#ruleList" data-toggle="tab">规则列表</a></li>
+  	<li><a href="#tbRule" data-toggle="tab">定义表规则</a></li>
+  	<li><a href="#messages" data-toggle="tab">定义字段规则</a></li>
+  	<li><a href="#settings" data-toggle="tab">额外规则</a></li>
 </ul>
 <div class="tab-content">
-  <div class="tab-pane fade in  active" id="profile">...</div>
-  <div class="tab-pane fade" id="tb_rule">
-<form class="form-horizontal rule">
+  	<div class="tab-pane fade in  active" id="ruleList">
+		<ul class="list-group">
+		{% for i in ruleList %}
+  			<li class="list-group-item">{{escape(i)}}</li>
+		{% end %}
+		</ul>
+	</div>
+  	<div class="tab-pane fade" id="tbRule">
+		<form action="#" class="form-horizontal rule">
     	<fieldset>
-		<div class="col-xs-12 col-sm-6 col-md-4 tap">
+		<div  class="col-xs-12 col-sm-6 col-md-4 tap">
     			<div class=" panel panel-default">
           			<div class="panel-heading">选择存储引擎</div>
           			<div class="panel-body">
@@ -42,16 +57,16 @@
           		<div class="panel-heading">选择字符集</div>
           		<div class="panel-body">
       				<label class="checkbox inline">
-        				<input type="checkbox" value="utf-8">
+        				<input type="checkbox" name = "charset" value="utf-8">
         				utf-8
       				</label>
       				<label class="checkbox inline">
-        				<input type="checkbox" value="gbk">
+        				<input type="checkbox" name = "charset" value="gbk">
         				gbk
       				</label>
       				<label class="checkbox inline">
-        				<input type="checkbox" value="laitin">
-        				laitin
+        				<input type="checkbox" name = "charset" value="latin1">
+        				latin1
       				</label>
   			</div>
         	</div>
@@ -61,56 +76,40 @@
           		<div class="panel-heading">字符校验规则</div>
           		<div class="panel-body">
       				<label class="checkbox inline">
-        				<input type="checkbox" value="utf8-unicode">
-        				utf8-unicode
+        				<input type="checkbox" name="collation" value="utf8_general_ci">
+        				utf8_general_ci
       				</label>
       				<label class="checkbox inline">
-        				<input type="checkbox" value="utf8-bin">
-        				utf8-bin
+        				<input type="checkbox" name="collation" value="utf8_bin">
+        				utf8_bin
       				</label>
       				<label class="checkbox inline">
-        				<input type="checkbox" value="utf8-generic">
-        				utf8-generic
+        				<input type="checkbox" name="collation" value="utf8_unicode_ci">
+        				utf8_unicode_ci 
       				</label>
       				<label class="checkbox inline">
-        				<input type="checkbox" value="gbk">
-        				gbk
+        				<input type="checkbox" name="collation" value="gbk_chinese_ci">
+        				gbk_chinese_ci
       				</label>
       				<label class="checkbox inline">
-        				<input type="checkbox" value="..">
-        				latin
+        				<input type="checkbox" name="collation" value="gbk_bin">
+        				gbk_bin
       				</label>
       				<label class="checkbox inline">
-        				<input type="checkbox" value="..">
-        				latin
+        				<input type="checkbox" name="collation" value="latin1_bin">
+        				latin1_bin
       				</label>
       				<label class="checkbox inline">
-        				<input type="checkbox" value="..">
-        				latin
+        				<input type="checkbox" name="collation" value="latin1_general_ci">
+        				latin1_general_ci
+      				</label>
+      				<label class="checkbox inline">
+        				<input type="checkbox" name="collation" value="latin1_swedish_ci">
+        				latin1_swedish_ci
       				</label>
   			</div>
 		</div>
 		</div>
-		<div class="col-xs-12 col-sm-6 col-md-4 tap">
-		<div class=" panel panel-default">
-          		<div class="panel-heading">是否有主键</div>
-          		<div class="panel-body">
-      				<label class="radio inline">
-        				<input type="radio" value="1" name="key_status" checked="checked">
-        				必须有
-      				</label>
-      				<label class="radio inline">
-        				<input type="radio" value="2" name="key_status">
-        				建议有
-      				</label>
-      				<label class="radio inline">
-        				<input type="radio" value="3" name="key_status">
-        				不要求
-      				</label>
-  			</div>
-        	</div>
-		</div>
-    
 		<div class="col-xs-12 col-sm-6 col-md-4 tap">
     		<div class="panel panel-default">
           		<div class="panel-heading">表注释Comment</div>
@@ -131,25 +130,41 @@
         	</div>
 		</div>
 		<div class="col-xs-12 col-sm-6 col-md-4 tap">
-		<div class="panel panel-default">
-          		<div class="panel-heading">主键字段类型</div>
+		<div class=" panel panel-default">
+          		<div class="panel-heading">是否有主键</div>
           		<div class="panel-body">
-      				<label class="checkbox inline">
-        				<input type="checkbox" value="INT">
-        				INT
+      				<label class="radio inline">
+        				<input type="radio" value="1" name="key_status" checked="checked">
+        				必须有
       				</label>
-      				<label class="checkbox inline">
-        				<input type="checkbox" value="BIGINT">
-        				BIGINT
+      				<label class="radio inline">
+        				<input type="radio" value="2" name="key_status">
+        				建议有
       				</label>
-      				<label class="checkbox inline">
-        				<input type="checkbox" value="不要求">
+      				<label class="radio inline">
+        				<input type="radio" value="3" name="key_status">
         				不要求
       				</label>
   			</div>
         	</div>
 		</div>
 		<div class="col-xs-12 col-sm-6 col-md-4 tap">
+		<div class="panel panel-default">
+          		<div class="panel-heading">主键字段类型</div>
+          		<div class="panel-body">
+				<label class="radio inline">
+                                        <input type="radio" value="1" name="key_type" checked="checked">
+                                        整形
+                                </label>
+                                <label class="radio inline">
+                                        <input type="radio" value="2" name="key_type">
+                                        字符串
+                                </label>
+  			</div>
+        	</div>
+        	</div>
+    
+		<!--div class="col-xs-12 col-sm-6 col-md-4 tap">
     		<div class="panel panel-default">
           		<div class="panel-heading">特殊字段</div>
           		<div class="panel-body">
@@ -185,9 +200,9 @@
             			<p class="help-block"></p>
           		</div>
         	</div>
-		</div>
+		</div-->
     	</fieldset>	
-<button type='submit'   class="btn btn-primary">审核</button>
+<button type='submit' data-loading-text="正在保存..."  class="btn btn-success">提交</button>
 </form>
 </div>
   <div class="tab-pane fade" id="messages">...</div>

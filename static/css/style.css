@@ -107,7 +107,8 @@ font-size: 10px;
 .rule {
 font-size: 12px;
 padding-right: 15px;
-padding-left: 15px;
+padding-top: 10px;
+//padding-left: 15px;
 }
 .rule .tap {
 padding-right: 8px;
