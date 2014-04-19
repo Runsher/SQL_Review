@@ -33,6 +33,8 @@ class RulePart():
 	def getRulesTails(self):
 		engines,collations,charset,com_status,key_status,key_type = [],[],[],[],[],[]
 		engine = MySQL.MysqlQuery().query_select('select distinct(variable_rule) from DB_REVIEW_CONTROL.tb_table_rule where rule_status=1 and variable="engine"')
+		#test = MySQL.MysqlQuery().query_select('select variable,variable_rule from DB_REVIEW_CONTROL.tb_table_rule where rule_status=1')
+		#print test
 		for i in engine:
 			engines.append(i[0])
 
@@ -64,7 +66,8 @@ if __name__ == "__main__":
 #	rulenames =  t.getRules()
 #	print rulenames
 	tbru = t.getRulesTails()
-	print tbru['engine']
-	for k,y in tbru.iteritems():
-		if k == 'engine':
-			print y
+	print tbru
+	#print tbru['engine']
+	#for k,y in tbru.iteritems():
+	#	if k == 'engine':
+	#		print y

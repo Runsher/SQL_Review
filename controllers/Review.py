@@ -34,7 +34,7 @@ class LoadAndClean():
 		tb_bak = '.'.join(tb_b)
 		MySQL.MysqlQuery().query_update('drop table if exists %s' %(tb_bak))
 		MySQL.MysqlQuery().query_update('rename table %s to %s' %(tb_del,tb_bak)) 
-		MySQL.MysqlQuery().query_update('drop table if exists %s' %(tb_del)) 
+		#MySQL.MysqlQuery().query_update('drop table if exists %s' %(tb_del)) 
 
 
 
@@ -93,7 +93,8 @@ class Review(tornado.web.RequestHandler):
 						tb = "".join(tuple(tb_tup))
 						ReviewPart.ReviewPart().review_table(MySQL.db,tb)
 						ReviewPart.ReviewPart().review_column(MySQL.db,tb)	
-					rs_info = MySQL.MysqlQuery().query_select('select tb_name,result from DB_REVIEW_CONTROL.tb_review_result where id > %s' %(max_id))
+						ReviewPart.ReviewPart().review_extra(MySQL.db,tb)	
+					rs_info = MySQL.MysqlQuery().query_select('select tb_name,tb_col,result from DB_REVIEW_CONTROL.tb_review_result where id > %s' %(max_id))
 					if rs_info:
 						review_status = 2
 						info = rs_info

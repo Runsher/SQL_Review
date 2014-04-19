@@ -5,8 +5,38 @@
 			<div class="col-xs-12 col-sm-4 col-md-3 siderbar">
 				{% include "layout/siderbar.html" %} 
 			</div>
-			<div  class="col-xs-12 col-sm-8 col-md-9">
-				{% block main %}{% end %}
+			<div  class="col-xs-12 col-sm-8 col-md-7 home">
+				{% block main %}
+				<div class="col-xs-6 col-sm-6 col-md-6">
+				<blockquote>
+					<p>
+						<a href = "http://10.10.64.151:8080/manager">Cobar Maneger 高可用HA监控管理平台</a>
+						
+					</p> <small>Cobar <cite>高可用</cite></small>
+				</blockquote>
+				</div>
+				<div class="col-xs-6 col-sm-6 col-md-6">
+				<blockquote>
+					<p>
+						<a href = "http://10.10.64.105:8089/login">ZooKeeper 数据库实例配置调度管理平台</a>
+					</p> <small>ZooKeeper <cite>配置中心</cite></small>
+				</blockquote>
+				</div>
+				<div class="col-xs-6 col-sm-6 col-md-6">
+				<blockquote>
+					<p>
+						<a href = "http://10.10.65.15/achievo/index.php">Achievo 数据库实例DAS管理配置平台</a>
+					</p> <small>DAS <cite>自动化DB平台</cite></small>
+				</blockquote>
+				</div>
+				<div class="col-xs-6 col-sm-6 col-md-6">
+				<blockquote>
+					<p>
+						<a href = "http://zabbix.op.dajie-inc.com/screens.php">Zabbix 数据库服务器&实例监控平台</a>
+					</p> <small>Zabbix <cite>监控平台</cite></small>
+				</blockquote>
+				</div>
+				{% end %}
 			</div>
 	</div>
 <!--{% include "layout/footer.html" %}-->

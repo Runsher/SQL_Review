@@ -24,7 +24,7 @@
                 			{% end %}
                 			{% if status == 2 %}
                 				<div class="alert alert-warning"><strong>Info:</strong>
-                        				<a href="#" class="alert-link">审核完成，有警告信息</a>
+                        				<a href="#" class="alert-link">审核完成，有不符合要求语句</a>
                 				</div>
                 			{% end %}
                 			{% if status == 3 %}
@@ -53,15 +53,15 @@
 							<th class="center hidden-480">Level</th>
 						</tr>
 					</thead>
-					{%for i,j in items%}
+					{%for i,j,k in items%}
 					<tbody>
 						<td>
 							<a>{{escape(i)}}</a>
 						</td>
-						<td>column name</td>
-						<td class="hidden-480">{{escape(j)}}</td>
+						<td>{{escape(j)}}</td>
+						<td class="hidden-480">{{escape(k)}}</td>
 						<td class="hidden-480">
-							<span class="label label-sm label-warning">Warning</span>
+							<span class="label label-sm label-danger">Error</span>
 						</td>
 					</tbody>
 					{%end%}

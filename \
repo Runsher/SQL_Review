@@ -139,6 +139,6 @@ background-color: #1DAA8E;
 .home {
 margin-top:53px;
 }
-blockquote {
-border-left:5px solid #17C5CC;
+.home .blockquote {
+border-left: 5px solid #43CCD8;
 }

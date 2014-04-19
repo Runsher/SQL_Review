@@ -20,7 +20,7 @@ class Rule(tornado.web.RequestHandler):
 		self.render('rule.html',title='rule',items=info,ruleList=ruleNames)
         def post(self):
 		tb_dict = {}
-		engine,charset,collation,key_status,com_status,key_type=['None'],['None'],['0'],['0'],['0']
+		engine,charset,collation,key_status,com_status,key_type=['None'],['None'],['None'],['0'],['0'],['0']
 		try:
 			engine = self.request.arguments["engine"]
 		except Exception,ex:
