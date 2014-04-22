@@ -64,10 +64,13 @@ class Review(tornado.web.RequestHandler):
                                                 tb = "".join(tuple(tb_tup))
                                                 ReviewPart.ReviewPart().review_table(MySQL.db,tb)
                                                 ReviewPart.ReviewPart().review_column(MySQL.db,tb)
-                                        rs_info = MySQL.MysqlQuery().query_select('select result from DB_REVIEW_CONTROL.tb_review_result where id > %s' %(max_id))
+						ReviewPart.ReviewPart().review_extra(MySQL.db,tb)
+                                        rs_info = MySQL.MysqlQuery().query_select('select tb_name,tb_col,result from DB_REVIEW_CONTROL.tb_review_result where id > %s' %(max_id))
                                         if rs_info:
-                                                for rs in rs_info:
-                                                        info.append(rs[0])
+						review_status = 2
+	                                    	info = rs_info
+                                                #for rs in rs_info:
+                                                 #       info.append(rs[0])
                                         else:
 						review_status = 1
                                 else:
@@ -102,6 +105,8 @@ class Review(tornado.web.RequestHandler):
 						review_status = 1
 				else:
 					review_status = 3
+		#	else:   
+		#		review_status = 4 
 			try:
 				for tb_del in tb_name:
 					LoadAndClean().del_tmp_file(tb_del[0])

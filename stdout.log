@@ -1,0 +1,234 @@
+[I 140421 17:52:32 web:1635] 200 POST /review (192.168.11.207) 21.29ms
+[I 140421 17:52:47 web:1635] 200 POST /review (192.168.11.207) 185.91ms
+[I 140421 17:53:01 web:1635] 200 POST /review (192.168.11.207) 21.50ms
+[I 140421 17:53:03 web:1635] 304 GET / (192.168.11.207) 13.16ms
+[I 140421 17:53:05 web:1635] 200 GET /review (192.168.11.207) 15.54ms
+[I 140421 17:53:06 web:1635] 304 GET /rule (192.168.11.207) 16.65ms
+[I 140421 18:08:48 web:1635] 304 GET /review (192.168.11.207) 15.59ms
+[I 140421 18:08:49 web:1635] 304 GET / (192.168.11.207) 12.95ms
+[I 140421 18:08:50 web:1635] 304 GET /review (192.168.11.207) 15.17ms
+[I 140421 18:08:51 web:1635] 200 POST /review (192.168.11.207) 15.75ms
+[I 140421 18:09:01 web:1635] 200 POST /review (192.168.11.207) 152.50ms
+ERROR 1064 (42000) at line 1 in file: 'tmp/tmp_file': You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '6597' at line 1
+[I 140421 18:09:05 web:1635] 200 POST /review (192.168.11.207) 56.78ms
+[I 140421 18:09:11 web:1635] 304 GET / (192.168.11.207) 15.30ms
+[I 140421 18:09:12 web:1635] 200 GET /review (192.168.11.207) 15.15ms
+[I 140421 18:09:13 web:1635] 304 GET /rule (192.168.11.207) 17.10ms
+[I 140421 18:09:13 web:1635] 304 GET /review (192.168.11.207) 16.13ms
+[I 140421 18:09:14 web:1635] 304 GET / (192.168.11.207) 14.38ms
+[I 140421 18:09:14 web:1635] 304 GET /review (192.168.11.207) 15.42ms
+[I 140421 18:09:15 web:1635] 304 GET /rule (192.168.11.207) 17.78ms
+[I 140421 18:21:51 web:1635] 304 GET /review (192.168.11.207) 15.15ms
+[I 140421 18:21:52 web:1635] 304 GET / (192.168.11.207) 13.20ms
+[I 140421 18:21:52 web:1635] 304 GET /review (192.168.11.207) 15.42ms
+[I 140421 18:21:53 web:1635] 304 GET /rule (192.168.11.207) 16.29ms
+[I 140421 18:21:54 web:1635] 304 GET / (192.168.11.207) 13.51ms
+[I 140421 18:21:55 web:1635] 304 GET /review (192.168.11.207) 15.37ms
+[I 140421 18:21:55 web:1635] 304 GET /rule (192.168.11.207) 16.86ms
+[I 140421 18:21:57 web:1635] 304 GET /review (192.168.11.207) 15.04ms
+[I 140421 18:21:58 web:1635] 304 GET / (192.168.11.207) 14.85ms
+[I 140421 18:21:58 web:1635] 304 GET /review (192.168.11.207) 14.97ms
+[I 140421 18:21:59 web:1635] 304 GET /rule (192.168.11.207) 17.08ms
+[I 140421 18:22:00 web:1635] 304 GET /review (192.168.11.207) 15.21ms
+[I 140421 18:22:00 web:1635] 304 GET /review (192.168.11.207) 14.62ms
+[I 140421 18:22:01 web:1635] 304 GET / (192.168.11.207) 13.57ms
+[I 140421 18:22:02 web:1635] 304 GET /review (192.168.11.207) 15.87ms
+[I 140421 18:22:03 web:1635] 304 GET /rule (192.168.11.207) 18.11ms
+[I 140421 18:22:03 web:1635] 304 GET /review (192.168.11.207) 15.76ms
+[I 140421 18:22:04 web:1635] 304 GET / (192.168.11.207) 14.40ms
+[I 140421 18:22:06 web:1635] 304 GET /review (192.168.11.207) 14.98ms
+[I 140421 18:22:07 web:1635] 304 GET /rule (192.168.11.207) 16.87ms
+[I 140421 18:22:07 web:1635] 304 GET / (192.168.11.207) 13.05ms
+[I 140421 18:22:08 web:1635] 304 GET /review (192.168.11.207) 15.19ms
+[I 140421 18:22:09 web:1635] 304 GET /rule (192.168.11.207) 16.71ms
+[I 140421 18:22:10 web:1635] 304 GET / (192.168.11.207) 14.61ms
+[I 140421 18:22:11 web:1635] 304 GET /review (192.168.11.207) 15.65ms
+[I 140421 18:22:11 web:1635] 304 GET /rule (192.168.11.207) 17.53ms
+[I 140421 18:23:21 web:1635] 304 GET / (192.168.11.207) 14.16ms
+[I 140421 18:23:22 web:1635] 304 GET /review (192.168.11.207) 15.33ms
+[I 140421 18:23:23 web:1635] 304 GET /rule (192.168.11.207) 17.26ms
+[I 140421 18:23:24 web:1635] 304 GET /review (192.168.11.207) 15.45ms
+[I 140421 18:23:24 web:1635] 304 GET / (192.168.11.207) 12.81ms
+[I 140421 18:23:25 web:1635] 304 GET /review (192.168.11.207) 15.27ms
+[I 140421 18:23:26 web:1635] 304 GET /rule (192.168.11.207) 17.85ms
+[I 140421 18:23:27 web:1635] 304 GET / (192.168.11.207) 13.29ms
+[I 140421 18:23:28 web:1635] 304 GET /review (192.168.11.207) 15.47ms
+[I 140421 18:23:29 web:1635] 304 GET / (192.168.11.207) 14.13ms
+[I 140421 18:25:03 web:1635] 304 GET /review (192.168.11.207) 16.12ms
+[I 140421 18:25:04 web:1635] 304 GET /rule (192.168.11.207) 16.44ms
+[I 140421 18:25:06 web:1635] 304 GET / (192.168.11.207) 13.62ms
+[I 140421 18:25:08 web:1635] 304 GET /review (192.168.11.207) 15.18ms
+[I 140421 18:25:09 web:1635] 304 GET /rule (192.168.11.207) 16.25ms
+[I 140421 18:25:10 web:1635] 304 GET /review (192.168.11.207) 15.31ms
+[I 140421 18:25:10 web:1635] 304 GET / (192.168.11.207) 14.01ms
+[I 140422 09:52:06 web:1635] 304 GET /review (192.168.11.207) 22.61ms
+[I 140422 09:52:06 web:1635] 304 GET /static/css/bootstrap.min.css?v=35fc838ce584c1eb81b3bebe245442d6 (192.168.11.207) 9.19ms
+[I 140422 09:52:06 web:1635] 304 GET /static/css/style.css?v=cae179ee550ce6579f5840f852f59dfe (192.168.11.207) 0.86ms
+[I 140422 09:52:06 web:1635] 304 GET /static/js/bootstrap.min.js?v=353240ad37d1b084a53b1575f8ce57da (192.168.11.207) 0.94ms
+[I 140422 09:52:06 web:1635] 304 GET /static/js/jquery.min.js?v=e6661cd3c4bc60b03deade3f51f2b3c6 (192.168.11.207) 1.15ms
+[I 140422 09:52:06 web:1635] 304 GET /static/js/bootstrap.file-input.js?v=e585107983524b88cb88f4d8429b70ae (192.168.11.207) 0.75ms
+[I 140422 09:52:08 web:1635] 304 GET / (192.168.11.207) 14.55ms
+[I 140422 09:52:09 web:1635] 304 GET /review (192.168.11.207) 15.65ms
+[I 140422 09:52:10 web:1635] 304 GET /rule (192.168.11.207) 34.73ms
+[I 140422 09:52:11 web:1635] 304 GET /rule (192.168.11.207) 19.09ms
+[I 140422 09:52:12 web:1635] 304 GET /review (192.168.11.207) 15.21ms
+[I 140422 09:52:13 web:1635] 304 GET / (192.168.11.207) 13.04ms
+[I 140422 09:52:14 web:1635] 304 GET /review (192.168.11.207) 14.99ms
+[I 140422 09:52:15 web:1635] 200 POST /review (192.168.11.207) 15.94ms
+ERROR 1064 (42000) at line 1 in file: 'tmp/tmp_file': You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '6597' at line 1
+[I 140422 09:52:18 web:1635] 200 POST /review (192.168.11.207) 202.20ms
+[I 140422 10:20:54 web:1635] 304 GET /rule (192.168.11.207) 17.66ms
+[I 140422 10:20:59 web:1635] 200 GET /review (192.168.11.207) 15.88ms
+[I 140422 10:21:00 web:1635] 304 GET / (192.168.11.207) 13.14ms
+[I 140422 10:21:01 web:1635] 304 GET /review (192.168.11.207) 15.46ms
+[I 140422 10:21:02 web:1635] 304 GET /rule (192.168.11.207) 16.33ms
+[I 140422 10:22:44 web:1635] 304 GET / (192.168.11.207) 14.12ms
+[I 140422 12:12:07 web:1635] 304 GET /review (192.168.11.207) 15.15ms
+[I 140422 12:12:08 web:1635] 200 POST /review (192.168.11.207) 16.80ms
+ERROR 1231 (42000) at line 555 in file: 'tmp/xiaotuiji_new_0422.sql': Variable 'sql_mode' can't be set to the value of 'NULL'
+/root/yeq/soft/SQL_Review/controllers/MySQL.py:64: Warning: Unknown table 'tb_xtj_affix'
+  cur.execute(sqlCommand)
+/root/yeq/soft/SQL_Review/controllers/MySQL.py:64: Warning: Unknown table 'tb_xtj_clock_message'
+  cur.execute(sqlCommand)
+/root/yeq/soft/SQL_Review/controllers/MySQL.py:64: Warning: Unknown table 'tb_xtj_corp_red'
+  cur.execute(sqlCommand)
+/root/yeq/soft/SQL_Review/controllers/MySQL.py:64: Warning: Unknown table 'tb_xtj_corp_red_range'
+  cur.execute(sqlCommand)
+/root/yeq/soft/SQL_Review/controllers/MySQL.py:64: Warning: Unknown table 'tb_xtj_corpemail_suffix'
+  cur.execute(sqlCommand)
+/root/yeq/soft/SQL_Review/controllers/MySQL.py:64: Warning: Unknown table 'tb_xtj_money_pool'
+  cur.execute(sqlCommand)
+[I 140422 12:12:17 web:1635] 200 POST /review (192.168.11.207) 1818.27ms
+[I 140422 12:15:21 web:1635] 200 POST /review (192.168.11.207) 15.87ms
+ERROR 1231 (42000) at line 555 in file: 'tmp/xiaotuiji_new_0422.sql': Variable 'sql_mode' can't be set to the value of 'NULL'
+[I 140422 12:15:27 web:1635] 200 POST /review (192.168.11.207) 1750.69ms
+ERROR 1231 (42000) at line 555 in file: 'tmp/xiaotuiji_new_0422.sql': Variable 'sql_mode' can't be set to the value of 'NULL'
+[I 140422 12:15:39 web:1635] 200 POST /review (192.168.11.207) 1788.53ms
+[I 140422 12:15:39 web:1635] 304 GET /static/css/bootstrap.min.css?v=35fc838ce584c1eb81b3bebe245442d6 (192.168.11.207) 2.32ms
+[I 140422 12:15:39 web:1635] 304 GET /static/css/style.css?v=cae179ee550ce6579f5840f852f59dfe (192.168.11.207) 0.78ms
+[I 140422 12:15:39 web:1635] 304 GET /static/js/jquery.min.js?v=e6661cd3c4bc60b03deade3f51f2b3c6 (192.168.11.207) 1.18ms
+[I 140422 12:15:39 web:1635] 304 GET /static/js/bootstrap.min.js?v=353240ad37d1b084a53b1575f8ce57da (192.168.11.207) 0.92ms
+[I 140422 12:15:39 web:1635] 304 GET /static/js/bootstrap.file-input.js?v=e585107983524b88cb88f4d8429b70ae (192.168.11.207) 0.83ms
+ERROR 1231 (42000) at line 555 in file: 'tmp/xiaotuiji_new_0422.sql': Variable 'sql_mode' can't be set to the value of 'NULL'
+[I 140422 12:48:57 web:1635] 200 POST /review (192.168.11.207) 1852.44ms
+[I 140422 12:48:58 web:1635] 304 GET /static/css/bootstrap.min.css?v=35fc838ce584c1eb81b3bebe245442d6 (192.168.11.207) 2.29ms
+[I 140422 12:48:58 web:1635] 304 GET /static/css/style.css?v=cae179ee550ce6579f5840f852f59dfe (192.168.11.207) 0.86ms
+[I 140422 12:48:58 web:1635] 304 GET /static/js/jquery.min.js?v=e6661cd3c4bc60b03deade3f51f2b3c6 (192.168.11.207) 1.07ms
+[I 140422 12:48:58 web:1635] 304 GET /static/js/bootstrap.min.js?v=353240ad37d1b084a53b1575f8ce57da (192.168.11.207) 0.94ms
+[I 140422 12:48:58 web:1635] 304 GET /static/js/bootstrap.file-input.js?v=e585107983524b88cb88f4d8429b70ae (192.168.11.207) 0.83ms
+[I 140422 12:48:58 web:1635] 200 POST /review (192.168.11.207) 16.16ms
+ERROR 1231 (42000) at line 555 in file: 'tmp/xiaotuiji_new_0422.sql': Variable 'sql_mode' can't be set to the value of 'NULL'
+[I 140422 12:49:03 web:1635] 200 POST /review (192.168.11.207) 1716.63ms
+[I 140422 12:49:15 web:1635] 304 GET / (192.168.11.207) 13.77ms
+[I 140422 12:49:16 web:1635] 200 GET /review (192.168.11.207) 16.02ms
+ERROR 1231 (42000) at line 555 in file: 'tmp/xiaotuiji_new_0422.sql': Variable 'sql_mode' can't be set to the value of 'NULL'
+[I 140422 12:49:22 web:1635] 200 POST /review (192.168.11.207) 1737.13ms
+[I 140422 12:51:32 autoreload:186] /root/yeq/soft/SQL_Review/controllers/Review.py modified; restarting server
+ERROR 1231 (42000) at line 555 in file: 'tmp/xiaotuiji_new_0422.sql': Variable 'sql_mode' can't be set to the value of 'NULL'
+[I 140422 12:51:39 web:1635] 200 POST /review (192.168.11.207) 1829.26ms
+[I 140422 12:53:45 autoreload:186] /root/yeq/soft/SQL_Review/controllers/Review.py modified; restarting server
+[I 140422 12:53:51 web:1635] 200 POST /review (192.168.11.207) 21.67ms
+[I 140422 12:53:52 web:1635] 200 POST /review (192.168.11.207) 15.50ms
+ERROR 1231 (42000) at line 555 in file: 'tmp/xiaotuiji_new_0422.sql': Variable 'sql_mode' can't be set to the value of 'NULL'
+[I 140422 12:53:57 web:1635] 200 POST /review (192.168.11.207) 1757.56ms
+[I 140422 12:54:09 web:1635] 200 POST /review (192.168.11.207) 16.03ms
+ERROR 1146 (42S02) at line 1 in file: 'tmp/422.sql': Table 'DB_REVIEW.tb_user_base' doesn't exist
+[I 140422 12:54:12 web:1635] 200 POST /review (192.168.11.207) 129.68ms
+ERROR 1231 (42000) at line 555 in file: 'tmp/xiaotuiji_new_0422.sql': Variable 'sql_mode' can't be set to the value of 'NULL'
+ERROR 1146 (42S02) at line 1 in file: 'tmp/422.sql': Table 'DB_REVIEW.tb_user_base' doesn't exist
+[I 140422 12:54:21 web:1635] 200 POST /review (192.168.11.207) 1769.06ms
+[I 140422 12:54:35 autoreload:186] /root/yeq/soft/SQL_Review/controllers/Review.py modified; restarting server
+[I 140422 12:55:04 web:1635] 200 POST /review (192.168.11.207) 1755.46ms
+[I 140422 12:55:15 web:1635] 200 POST /review (192.168.11.207) 16.36ms
+ERROR 1146 (42S02) at line 1 in file: 'tmp/422.sql': Table 'DB_REVIEW.tb_user_base' doesn't exist
+[I 140422 12:55:19 web:1635] 200 POST /review (192.168.11.207) 132.31ms
+ERROR 1146 (42S02) at line 1 in file: 'tmp/422.sql': Table 'DB_REVIEW.tb_user_base' doesn't exist
+[I 140422 12:55:28 web:1635] 200 POST /review (192.168.11.207) 1756.26ms
+ERROR 1146 (42S02) at line 1 in file: 'tmp/422.sql': Table 'DB_REVIEW.tb_user_base' doesn't exist
+[I 140422 12:55:31 web:1635] 200 POST /review (192.168.11.207) 131.71ms
+[I 140422 13:53:28 web:1635] 200 POST /review (192.168.11.207) 17.26ms
+ERROR 1146 (42S02) at line 1 in file: 'tmp/422.sql': Table 'DB_REVIEW.tb_user_base' doesn't exist
+[I 140422 13:53:33 web:1635] 200 POST /review (192.168.11.207) 1882.22ms
+ERROR 1146 (42S02) at line 1 in file: 'tmp/422.sql': Table 'DB_REVIEW.tb_user_base' doesn't exist
+[I 140422 13:53:38 web:1635] 200 POST /review (192.168.11.207) 119.90ms
+ERROR 1146 (42S02) at line 1 in file: 'tmp/422.sql': Table 'DB_REVIEW.tb_user_base' doesn't exist
+ERROR 1146 (42S02) at line 1 in file: 'tmp/关注表调整.sql': Table 'DB_REVIEW.tb_corp_follow_0' doesn't exist
+[I 140422 13:54:02 web:1635] 200 POST /review (192.168.11.207) 705.57ms
+[I 140422 13:54:04 web:1635] 200 POST /review (192.168.11.207) 16.30ms
+ERROR 1146 (42S02) at line 1 in file: 'tmp/422.sql': Table 'DB_REVIEW.tb_user_base' doesn't exist
+ERROR 1146 (42S02) at line 1 in file: 'tmp/关注表调整.sql': Table 'DB_REVIEW.tb_corp_follow_0' doesn't exist
+[I 140422 13:54:08 web:1635] 200 POST /review (192.168.11.207) 701.52ms
+ERROR 1146 (42S02) at line 1 in file: 'tmp/422.sql': Table 'DB_REVIEW.tb_user_base' doesn't exist
+ERROR 1146 (42S02) at line 1 in file: 'tmp/uids417.sql': Table 'DB_REVIEW.tb_user_base' doesn't exist
+ERROR 1146 (42S02) at line 1 in file: 'tmp/关注表调整.sql': Table 'DB_REVIEW.tb_corp_follow_0' doesn't exist
+[I 140422 13:54:14 web:1635] 200 POST /review (192.168.11.207) 623.54ms
+ERROR 1146 (42S02) at line 1 in file: 'tmp/422.sql': Table 'DB_REVIEW.tb_user_base' doesn't exist
+ERROR 1146 (42S02) at line 1 in file: 'tmp/uids417.sql': Table 'DB_REVIEW.tb_user_base' doesn't exist
+ERROR 1146 (42S02) at line 1 in file: 'tmp/关注表调整.sql': Table 'DB_REVIEW.tb_corp_follow_0' doesn't exist
+[I 140422 13:56:53 web:1635] 200 POST /review (192.168.11.207) 656.93ms
+[I 140422 13:58:49 web:1635] 200 POST /review (192.168.11.207) 17.57ms
+[I 140422 13:58:51 web:1635] 200 POST /review (192.168.11.207) 15.76ms
+[I 140422 13:58:52 web:1635] 200 POST /review (192.168.11.207) 20.23ms
+[I 140422 13:58:53 web:1635] 304 GET / (192.168.11.207) 13.02ms
+[I 140422 13:58:54 web:1635] 200 GET /review (192.168.11.207) 17.55ms
+[I 140422 13:58:55 web:1635] 200 POST /review (192.168.11.207) 15.55ms
+ERROR 1146 (42S02) at line 1 in file: 'tmp/422.sql': Table 'DB_REVIEW.tb_user_base' doesn't exist
+ERROR 1146 (42S02) at line 1 in file: 'tmp/uids417.sql': Table 'DB_REVIEW.tb_user_base' doesn't exist
+ERROR 1146 (42S02) at line 1 in file: 'tmp/关注表调整.sql': Table 'DB_REVIEW.tb_corp_follow_0' doesn't exist
+[I 140422 13:59:02 web:1635] 200 POST /review (192.168.11.207) 623.43ms
+[I 140422 13:59:03 web:1635] 200 POST /review (192.168.11.207) 17.14ms
+[I 140422 14:01:44 autoreload:186] /root/yeq/soft/SQL_Review/controllers/Review.py modified; restarting server
+[I 140422 14:01:47 web:1635] 200 POST /review (192.168.11.207) 21.63ms
+ERROR 1146 (42S02) at line 1 in file: 'tmp/422.sql': Table 'DB_REVIEW.tb_user_base' doesn't exist
+ERROR 1146 (42S02) at line 1 in file: 'tmp/uids417.sql': Table 'DB_REVIEW.tb_user_base' doesn't exist
+ERROR 1146 (42S02) at line 1 in file: 'tmp/关注表调整.sql': Table 'DB_REVIEW.tb_corp_follow_0' doesn't exist
+[I 140422 14:01:50 web:1635] 200 POST /review (192.168.11.207) 675.55ms
+ERROR 1146 (42S02) at line 1 in file: 'tmp/422.sql': Table 'DB_REVIEW.tb_user_base' doesn't exist
+ERROR 1146 (42S02) at line 1 in file: 'tmp/uids417.sql': Table 'DB_REVIEW.tb_user_base' doesn't exist
+ERROR 1146 (42S02) at line 1 in file: 'tmp/关注表调整.sql': Table 'DB_REVIEW.tb_corp_follow_0' doesn't exist
+[I 140422 14:02:02 web:1635] 200 POST /review (192.168.11.207) 2367.69ms
+ERROR 1146 (42S02) at line 1 in file: 'tmp/422.sql': Table 'DB_REVIEW.tb_user_base' doesn't exist
+[I 140422 14:02:09 web:1635] 200 POST /review (192.168.11.207) 128.48ms
+ERROR 1146 (42S02) at line 1 in file: 'tmp/422.sql': Table 'DB_REVIEW.tb_user_base' doesn't exist
+[I 140422 14:02:16 web:1635] 200 POST /review (192.168.11.207) 1893.91ms
+[I 140422 14:02:25 web:1635] 200 POST /review (192.168.11.207) 15.85ms
+[I 140422 14:02:36 web:1635] 200 POST /review (192.168.11.207) 2162.80ms
+[I 140422 14:27:32 web:1635] 200 POST /review (192.168.11.207) 16.09ms
+[I 140422 15:16:52 web:1635] 200 POST /review (192.168.11.207) 1875.94ms
+[I 140422 15:17:33 web:1635] 304 GET /rule (192.168.11.207) 16.96ms
+[I 140422 15:17:38 web:1635] 304 GET / (192.168.11.207) 13.43ms
+[I 140422 15:17:39 web:1635] 200 GET /review (192.168.11.207) 15.62ms
+[I 140422 15:17:40 web:1635] 304 GET /rule (192.168.11.207) 16.53ms
+[I 140422 15:17:41 web:1635] 304 GET /review (192.168.11.207) 15.29ms
+[I 140422 15:17:41 web:1635] 304 GET / (192.168.11.207) 12.98ms
+[I 140422 15:17:42 web:1635] 304 GET /review (192.168.11.207) 17.51ms
+[I 140422 15:17:43 web:1635] 304 GET /rule (192.168.11.207) 17.12ms
+[I 140422 15:17:44 web:1635] 304 GET / (192.168.11.207) 13.03ms
+[I 140422 15:17:44 web:1635] 304 GET /review (192.168.11.207) 15.33ms
+[I 140422 15:17:45 web:1635] 304 GET /rule (192.168.11.207) 16.35ms
+[I 140422 15:17:46 web:1635] 304 GET /review (192.168.11.207) 15.50ms
+[I 140422 15:17:46 web:1635] 304 GET / (192.168.11.207) 12.83ms
+[I 140422 15:18:09 web:1635] 304 GET /rule (192.168.11.207) 16.87ms
+[I 140422 15:18:09 web:1635] 304 GET /review (192.168.11.207) 15.16ms
+[I 140422 15:18:10 web:1635] 304 GET / (192.168.11.207) 12.97ms
+[I 140422 15:18:11 web:1635] 304 GET /review (192.168.11.207) 15.36ms
+[I 140422 15:18:11 web:1635] 304 GET /rule (192.168.11.207) 16.16ms
+[I 140422 15:18:12 web:1635] 304 GET /review (192.168.11.207) 15.09ms
+[I 140422 15:18:12 web:1635] 304 GET / (192.168.11.207) 12.94ms
+[I 140422 15:18:55 web:1635] 304 GET /rule (192.168.11.207) 16.96ms
+[I 140422 15:18:56 web:1635] 304 GET /review (192.168.11.207) 15.08ms
+[I 140422 15:18:56 web:1635] 304 GET / (192.168.11.207) 13.75ms
+[I 140422 15:18:57 web:1635] 304 GET /review (192.168.11.207) 15.05ms
+[I 140422 15:18:58 web:1635] 304 GET /rule (192.168.11.207) 16.33ms
+[I 140422 15:18:59 web:1635] 304 GET /review (192.168.11.207) 15.36ms
+[I 140422 15:18:59 web:1635] 304 GET / (192.168.11.207) 13.66ms
+[I 140422 15:19:00 web:1635] 304 GET /review (192.168.11.207) 15.32ms
+[I 140422 15:19:00 web:1635] 304 GET /rule (192.168.11.207) 16.11ms
+[I 140422 15:19:02 web:1635] 304 GET /review (192.168.11.207) 16.74ms
+[I 140422 15:19:03 web:1635] 304 GET / (192.168.11.207) 13.56ms
+[I 140422 15:19:04 web:1635] 304 GET /review (192.168.11.207) 16.09ms
+[I 140422 15:19:04 web:1635] 304 GET /rule (192.168.11.207) 16.84ms
+[I 140422 15:19:05 web:1635] 304 GET /review (192.168.11.207) 16.67ms
+[I 140422 15:19:05 web:1635] 304 GET / (192.168.11.207) 12.89ms
+[I 140422 15:19:06 web:1635] 304 GET /review (192.168.11.207) 15.00ms
+[I 140422 15:19:06 web:1635] 304 GET /rule (192.168.11.207) 16.52ms
