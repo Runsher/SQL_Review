@@ -83,7 +83,7 @@ class ReviewPart():
         def review_column(self,db,tb):
                 tb_col = MySQL.MysqlQuery().query_select('select * from information_schema.COLUMNS where table_schema="%s" and table_name="%s" ' %(db,tb))
                 for col_info in tb_col:
-                        if col_info[18] != '':
+                        if col_info[3] == 'id' or col_info[18] != '':
                                 pass;
                         else:
                                 result =  "缺少comment注释"

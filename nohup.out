@@ -1,0 +1,29 @@
+[I 140423 09:53:09 web:1635] 304 GET / (192.168.11.207) 19.85ms
+[I 140423 09:53:09 web:1635] 304 GET /static/css/bootstrap.min.css?v=35fc838ce584c1eb81b3bebe245442d6 (192.168.11.207) 9.95ms
+[I 140423 09:53:09 web:1635] 304 GET /static/css/style.css?v=cae179ee550ce6579f5840f852f59dfe (192.168.11.207) 0.87ms
+[I 140423 09:53:09 web:1635] 304 GET /static/js/jquery.min.js?v=e6661cd3c4bc60b03deade3f51f2b3c6 (192.168.11.207) 1.29ms
+[I 140423 09:53:09 web:1635] 304 GET /static/js/bootstrap.min.js?v=353240ad37d1b084a53b1575f8ce57da (192.168.11.207) 0.88ms
+[I 140423 09:53:09 web:1635] 304 GET /static/js/bootstrap.file-input.js?v=e585107983524b88cb88f4d8429b70ae (192.168.11.207) 0.80ms
+[I 140423 09:53:11 web:1635] 304 GET /review (192.168.11.207) 16.02ms
+[I 140423 09:55:00 web:1635] 304 GET /rule (192.168.11.207) 35.21ms
+[I 140423 09:55:01 web:1635] 304 GET /review (192.168.11.207) 16.24ms
+[I 140423 10:51:11 web:1635] 304 GET /review (192.168.11.207) 17.46ms
+[I 140423 10:51:11 web:1635] 304 GET /static/css/bootstrap.min.css?v=35fc838ce584c1eb81b3bebe245442d6 (192.168.11.207) 1.36ms
+[I 140423 10:51:11 web:1635] 304 GET /static/css/style.css?v=cae179ee550ce6579f5840f852f59dfe (192.168.11.207) 0.79ms
+[I 140423 10:51:11 web:1635] 304 GET /static/js/jquery.min.js?v=e6661cd3c4bc60b03deade3f51f2b3c6 (192.168.11.207) 1.04ms
+[I 140423 10:51:11 web:1635] 304 GET /static/js/bootstrap.min.js?v=353240ad37d1b084a53b1575f8ce57da (192.168.11.207) 0.86ms
+[I 140423 10:51:11 web:1635] 304 GET /static/js/bootstrap.file-input.js?v=e585107983524b88cb88f4d8429b70ae (192.168.11.207) 0.79ms
+[I 140423 10:51:12 web:1635] 304 GET / (192.168.11.207) 13.04ms
+[I 140423 10:51:12 web:1635] 304 GET / (192.168.11.207) 13.77ms
+[I 140423 10:51:12 web:1635] 304 GET /static/css/bootstrap.min.css?v=35fc838ce584c1eb81b3bebe245442d6 (192.168.11.207) 1.27ms
+[I 140423 10:51:12 web:1635] 304 GET /static/js/bootstrap.file-input.js?v=e585107983524b88cb88f4d8429b70ae (192.168.11.207) 0.80ms
+[I 140423 10:51:12 web:1635] 304 GET /static/js/bootstrap.min.js?v=353240ad37d1b084a53b1575f8ce57da (192.168.11.207) 0.88ms
+[I 140423 10:51:12 web:1635] 304 GET /static/js/jquery.min.js?v=e6661cd3c4bc60b03deade3f51f2b3c6 (192.168.11.207) 1.04ms
+[I 140423 10:51:12 web:1635] 304 GET /static/css/style.css?v=cae179ee550ce6579f5840f852f59dfe (192.168.11.207) 0.79ms
+[I 140423 12:57:31 web:1635] 304 GET /review (192.168.11.207) 14.84ms
+[I 140423 12:57:32 web:1635] 304 GET /rule (192.168.11.207) 16.74ms
+[I 140423 15:26:41 web:1635] 304 GET / (192.168.11.207) 13.07ms
+[I 140423 15:26:42 web:1635] 304 GET /review (192.168.11.207) 15.34ms
+[I 140423 15:29:48 autoreload:186] /root/yeq/soft/SQL_Review/controllers/ReviewPart.py modified; restarting server
+ERROR 1146 (42S02) at line 1 in file: 'tmp/422.sql': Table 'DB_REVIEW.tb_user_base' doesn't exist
+[I 140423 15:30:01 web:1635] 200 POST /review (192.168.11.207) 1849.83ms
