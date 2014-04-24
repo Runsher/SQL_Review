@@ -5,9 +5,15 @@ import os
 import ConfigParser
 from subprocess import Popen,PIPE
 import Unicode
+import time
+import datetime
 
 reload(sys)
 sys.setdefaultencoding("utf8")
+
+#now = time.localtime()
+#str_now = time.strftime("%Y%m%d%H%M%S", now )
+#tmpDB = 'DB_TMP'+str_now
 
 config = ConfigParser.ConfigParser()
 config.readfp(open("conf/review.conf"),"rb")
@@ -24,7 +30,12 @@ class MysqlLoad():
 
         def loadin(self,SqlTextIn):
 		Unicode.TransferToUnicode().transferToUnicode(SqlTextIn)
-		process = Popen('mysql -h%s -P%s -u%s -p%s %s ' %(host,port,user,passwd,db),stdout=PIPE,stdin=PIPE,shell=True)
+		now = time.localtime()
+		str_now = time.strftime("%Y%m%d%H%M%S", now )
+		global tmpDB
+		tmpDB = 'DB_TMP'+str_now
+		MysqlQuery().query_update('create database %s' %(tmpDB))
+		process = Popen('mysql -h%s -P%s -u%s -p%s %s ' %(host,port,user,passwd,tmpDB),stdout=PIPE,stdin=PIPE,shell=True)
 		process.communicate('source '+SqlTextIn)
 
 	def loadout(self,SqlTextOut):

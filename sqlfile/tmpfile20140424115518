@@ -1,0 +1,9 @@
+CREATE TABLE `tb_activity_enroll` (
+   `ID` int(10) unsigned NOT NULL AUTO_INCREMENT,
+   `ACTIVITY_ID` int(10) unsigned NOT NULL COMMENT '宣讲会ID',
+   `UID` int(11) NOT NULL COMMENT '大街帐号ID',
+   `mobile` varchar(11) DEFAULT NULL COMMENT '手机号码',
+   `CREATE_DATE` datetime DEFAULT NULL COMMENT '操作时间',
+   `UPDATE_TIME` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP COMMENT '更新时间',
+   PRIMARY KEY (`ID`)
+) comment '报名用户表 by weisonglin';

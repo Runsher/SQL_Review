@@ -1,0 +1,118 @@
+﻿INSERT INTO tb_xtj_hr_info
+(`id`,`dajie_uid`,`corp_id`,`corp_name`,`position`,`name`,`email`,`mobile`, `create_date`,`status`)
+VALUES
+('1','29984585','1000084','北京小米科技有限责任公司','HR','郑小姐','neitui@xiaomi.com',null,now(),1)
+
+
+
+INSERT INTO tb_xtj_corp_activity
+(`id`,`corp_id`, `start_date`,`end_date` ,`create_date`,status)
+VALUES
+('1','1000084','2014-04-24','2014-05-24',now(),1)
+
+
+insert into `tb_xtj_message_pic` (`id`, `name`,`corp_id`, `type`, `url`, `create_date`, `update_date`) 
+values
+('1','我的红包/提现',0,'4','http://assets.dajieimg.com/up/dj-mobile/pushover/pic/info/pushover-info-icon01.png',now(),now()),
+('2','我推荐的好友',0,'3','http://assets.dajieimg.com/up/dj-mobile/pushover/pic/info/pushover-info-icon02.png',now(),now()),
+('3','公司内推活动',1000084,'1','http://5.f1.dajieimg.com/n/micro_blog/T18QZTBvYv1RXrhCrK_c.jpg?f_fid=129322117&f_type=10&f_actorId=1624364&f_category=idfeed&f_view=0',now(),now()),
+('4','查消息',0,'5','http://5.f1.dajieimg.com/n/micro_blog/T1mudTBghv1R4cSCrK_c.png',now(),now(),
+('5','HR最新反馈',0,'6','http://assets.dajieimg.com/up/dj-mobile/pushover/pic/info/pushover-info-icon03.png',now(),now());
+
+
+
+INSERT INTO tb_xtj_corp_info
+(`corp_id`,`name`,`show_name`,`kind`,`tags`,`logo`,`poster`,`intro`,`activity_id`,`create_date`)
+VALUES
+('1000084','北京小米科技有限责任公司','小米科技','50','入职领用手机、赠送F码、有班车、美女多、不打卡、节日有福利、娱乐活动多、宠物米旺财','n/small_push/T1djCTBmCT1RXrhCrK_.jpg','http://5.f1.dajieimg.com/n/micro_blog/T1_rZTBjKv1RXrhCrK_c.jpg?f_fid=129360136&f_type=10&f_actorId=28739542&f_category=idfeed&f_view=0,'','1',now())
+
+
+
+
+INSERT INTO `tb_xtj_job` (`title`, `name`, `salary`, `salary_end`, `position_exper`,`position_function`,`position_industry`, `experience`, `city`, `degree`, `start_date`, `end_date`, `attraction`, `reward`, `intro`, `create_date`, `hr_email`,`corp_id`,`corp_name`,`hr_id`,`status`) VALUES 
+('热线客服专员','热线客服专员','124','124',2,'14','16','9999','110000','13','2014-4-24','2015-1-1','掌握米粉儿们的第一手声音','0','岗位职责：
+1、通过接听电话直接服务于用户，解决用户使用产品的问题；
+2、收集用户需求，协助各部门完善产品功能及市场推广；
+3、处理用户投诉，增加用户粘性；
+4、分析用户数据，优化工作解决方案；
+5、认可轮班制，即倒休模式。
+岗位要求：
+1、普通话标准流利；
+2、喜爱互联网，并具备一定的网络及安卓手机应用知识；
+3、喜欢与人打交道的工作，并能承受沟通压力；
+4、客户服务相关工作经验者优先；
+5、能接受倒班加班；
+6、有电话客服经验有限考虑；
+7、专业不限，计算机，通讯专业优先考虑。',now(),'neitui@xiaomi.com','1000084','北京小米科技有限责任公司','1',1),
+('在线客服专员','在线客服专员','124','124',2,'14','16','9999','110000','13','2014-4-24','2015-1-1','在幕后，你可以运筹帷幄为所欲为','0','岗位职责：
+1、通过在线交流的方式服务于用户，解决用户使用产品的问题；
+2、收集用户需求，协助各部门完善产品功能及市场推广；
+3、处理用户投诉，增加用户粘性；
+4、分析用户数据，优化工作解决方案；
+5、认可轮班制，即倒休模式。
+岗位要求：
+1、打字速度80字/分以上；
+2、喜爱互联网，具备一定的网络及手机应用知识；
+3、有耐心，善于倾听、理解、有一定的服务意识；
+4、能接受夜班倒班；
+5、有在线客服经验有限考虑；
+6、专业不限，计算机，通讯专业优先考虑。',now(),'neitui@xiaomi.com','1000084','北京小米科技有限责任公司','1',1),
+
+('海外客服专员','海外客服专员','124','124',2,'14','16','9999','110000','13','2014-4-24','2015-1-1','快速踏入全球化办公的节奏','0','岗位职责：
+1、通过电话，在线或者邮件的方式服务于香港，台湾，新加坡等地的用户，解决用户使用产品的问题；
+2、收集用户需求，提交到相关部门；
+3、分析用户数据，优化工作解决方案；
+4、认可一定程度的加班。
+岗位要求：
+1、中文口头书面表达能力强，英文口头书面表达良好；
+2、对电子和手机产品有一定了解；
+3、愿意从事客服行业，认可客服服务的价值；
+4、性格开朗、沟通表达能力强，打字60字/分；
+5、有海外客服经验优先考虑；
+6、专业不限，计算机，通讯专业优先考虑；
+7、马来西亚、泰语、等小语种优先',now(),'neitui@xiaomi.com','1000084','北京小米科技有限责任公司','1',1),
+
+('投诉专员','投诉专员','124','124',2,'14','16','9999','110000','13','2014-4-24','2015-1-1','坐着高档皮椅听投诉，这个feel奔儿爽','0','岗位职责：
+1、处理、跟踪、落实投诉事件；
+2、及时处理客户争议与纠纷，确保客户满意；
+3、记录客户投诉情况及处理过程，及时反馈至责任部门；
+4、对于紧急、重大投诉的处理，并及时进行反馈。
+岗位要求：
+1、普通话标准流利，曾从事相关投诉经验1-2年者优先考虑。
+2、稳重、善于倾听，思维缜密，有较强的沟通协调能力；
+3、具有较强的中文口语及书写能力；
+4、熟练使用PPT/ Word/Excel；
+5、遇事冷静，考虑问题客观、全面，工作耐心、细致；
+6、有投诉相关经验最佳；
+7、专业不限，计算机，通讯专业优先考虑。',now(),'neitui@xiaomi.com','1000084','北京小米科技有限责任公司','1',1),
+
+('天猫客服专员','天猫客服专员','124','124',2,'14','16','9999','110000','13','2014-4-24','2015-1-1','上班时间可以天天上天猫哦，亲~','0','岗位职责：
+1、通过旺旺接待客户，解答疑问，进行商品销售，促成交易，获取订单；
+2、熟悉天猫商城的各种操作规则,处理客户要求,管理店铺；
+3、负责销售过程的咨询、下单、发货、反馈；
+4、为天猫客户提供售后服务,并及时解决客户提出的问题和要求；
+5、接待、反馈、跟进与处理客户投诉，维护客户关系； 
+岗位要求：
+1、熟练使用日常办公软件，电脑操作熟练，打字速度快（80字/分以上）；
+2、对在线销售和电子商务具有浓厚的兴趣和遇事坚持不懈的精神；
+3、具有客户服务意识和销售技巧；
+4、表达能力强，有较强的引导购买能力、具备耐心，细心和责任心；
+5、有亲和力，较强的责任感、事业心和团队合作精神；
+6、有淘宝相关经验优先考虑；
+7、电子商务专业优先考虑。',now(),'neitui@xiaomi.com','1000084','北京小米科技有限责任公司','1',1);
+
+
+INSERT INTO tb_xtj_corp_red(id,corp_id,activity_id,start_date,end_date,total_amount,used_amount,STATUS,create_date,update_date)
+VALUES(1,1000084,1,'2014-4-24','2014-5-24',30000,0,1,NOW(),NOW());
+
+INSERT INTO tb_xtj_corp_red_range(red_id,source,amount_min,amount_max,create_date,update_date)
+VALUES(1,1,8,8,NOW(),NOW());
+INSERT INTO tb_xtj_corp_red_range(red_id,source,amount_min,amount_max,create_date,update_date)
+VALUES(1,2,3,5,NOW(),NOW());
+INSERT INTO tb_xtj_corp_red_range(red_id,source,amount_min,amount_max,create_date,update_date)
+VALUES(1,3,0,0,NOW(),NOW());
+
+
+INSERT INTO `tb_xtj_corpemail_suffix` ( `corp_id`, `email_suffix`, `create_date`, `update_date`)
+VALUES
+	( 1000084, 'xiaomi.com',now(), now());

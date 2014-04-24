@@ -33,7 +33,7 @@ class ReviewPart():
                 else:
                         result =  "存储引擎错误，只支持 %s" %(tableRules['engine'])
                         MySQL.MysqlQuery().query_update('insert into DB_REVIEW_CONTROL.tb_review_result(tb_name,result) values("%s","%s") ' %(tb,result))
-                charset = re.match(r'utf8',tb_info[0][17])
+#                charset = re.match(r'utf8',tb_info[0][17])
                 if tb_info[0][17] in tableRules['collation']:
                         pass;
                 else:
@@ -51,6 +51,13 @@ class ReviewPart():
                         MySQL.MysqlQuery().query_update('insert into DB_REVIEW_CONTROL.tb_review_result(tb_name,result) values("%s","%s") ' %(tb,result))
                 if tb_info[0][20] != "":
                         pass;
+	        if tb_info[0][20] == "" and tableRules['com_status'] == '1':
+  	      		result =  "请给表 %s 添加上Comment注释信息" %(tb)
+               		MySQL.MysqlQuery().query_update('insert into DB_REVIEW_CONTROL.tb_review_result(tb_name,result) values("%s","%s") ' %(tb,result))
+                else:
+			pass
+  	      		#result =  "请给表 %s 添加上Comment注释信息" %(tb)
+               		#MySQL.MysqlQuery().query_update('insert into DB_REVIEW_CONTROL.tb_review_result(tb_name,result) values("%s","%s") ' %(tb,result))
 #                tb_key_info = MySQL.MysqlQuery().query_select('select * from  information_schema.KEY_COLUMN_USAGE where table_schema="%s" and table_name="%s" limit 1' %(db,tb))
 #                if tb_key_info:
 #                         if  tb_key_info[0][2] == "PRIMARY":
@@ -74,16 +81,16 @@ class ReviewPart():
 #                else:
 #                        result =  "请不要为表 %s 添加非必要参数 %s" %(tb,tb_info[0][19])
 #                        MySQL.MysqlQuery().query_update('insert into DB_REVIEW_CONTROL.tb_review_result(tb_name,result) values("%s","%s") ' %(tb,result))
-#                if tb_info[0][20] != "":
-#                        pass;
+#	        if tb_info[0][20] != "":
+#          	         pass;
 #                else:
-#                        result =  "请给表 %s 添加上Comment注释信息" %(tb)
-#                        MySQL.MysqlQuery().query_update('insert into DB_REVIEW_CONTROL.tb_review_result(tb_name,result) values("%s","%s") ' %(tb,result))
+#  	      		result =  "请给表 %s 添加上Comment注释信息" %(tb)
+#               		MySQL.MysqlQuery().query_update('insert into DB_REVIEW_CONTROL.tb_review_result(tb_name,result) values("%s","%s") ' %(tb,result))
 
         def review_column(self,db,tb):
                 tb_col = MySQL.MysqlQuery().query_select('select * from information_schema.COLUMNS where table_schema="%s" and table_name="%s" ' %(db,tb))
                 for col_info in tb_col:
-                        if col_info[3] == 'id' or col_info[18] != '':
+                        if col_info[3] == 'id' or col_info[3] == 'ID' or col_info[18] != '':
                                 pass;
                         else:
                                 result =  "缺少comment注释"

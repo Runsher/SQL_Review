@@ -27,3 +27,565 @@
 [I 140423 15:29:48 autoreload:186] /root/yeq/soft/SQL_Review/controllers/ReviewPart.py modified; restarting server
 ERROR 1146 (42S02) at line 1 in file: 'tmp/422.sql': Table 'DB_REVIEW.tb_user_base' doesn't exist
 [I 140423 15:30:01 web:1635] 200 POST /review (192.168.11.207) 1849.83ms
+[I 140423 15:44:55 autoreload:186] /root/yeq/soft/SQL_Review/controllers/Review.py modified; restarting server
+Traceback (most recent call last):
+  File "application.py", line 11, in <module>
+    import Review
+  File "/root/yeq/soft/SQL_Review/controllers/Review.py", line 17, in <module>
+    str_now = time.strftime("%Y%m%d%H%M%S", now )
+NameError: name 'time' is not defined
+[I 140423 15:47:50 autoreload:186] /root/yeq/soft/SQL_Review/controllers/Review.py modified; restarting server
+[I 140423 15:47:57 web:1635] 200 POST /review (192.168.11.207) 1690.58ms
+[I 140423 15:48:19 autoreload:186] /root/yeq/soft/SQL_Review/controllers/Review.py modified; restarting server
+[I 140423 15:48:25 web:1635] 200 POST /review (192.168.11.207) 1452.52ms
+[I 140423 15:49:53 autoreload:186] /root/yeq/soft/SQL_Review/controllers/Review.py modified; restarting server
+[E 140423 15:49:57 web:1228] Uncaught exception POST /review (192.168.11.207)
+    HTTPRequest(protocol='http', host='192.168.22.225:3000', method='POST', uri='/review', version='HTTP/1.1', remote_ip='192.168.11.207', headers={'Origin': 'http://192.168.22.225:3000', 'Content-Length': '31488', 'Accept-Language': 'zh-CN,zh;q=0.8,en;q=0.6', 'Accept-Encoding': 'gzip,deflate,sdch', 'Host': '192.168.22.225:3000', 'Accept': 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8', 'User-Agent': 'Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/34.0.1847.116 Safari/537.36', 'Connection': 'keep-alive', 'Referer': 'http://192.168.22.225:3000/review', 'Cache-Control': 'max-age=0', 'Cookie': '__utma=115224007.1620756413.1398155325.1398155325.1398155325.1; __utmc=115224007; __utmz=115224007.1398155325.1.1.utmcsr=(direct)|utmccn=(direct)|utmcmd=(none)', 'Content-Type': 'multipart/form-data; boundary=----WebKitFormBoundarydll2O1U7Ow4uQ9eC'})
+    Traceback (most recent call last):
+      File "/usr/lib/python2.6/site-packages/tornado/web.py", line 1141, in _when_complete
+        callback()
+      File "/usr/lib/python2.6/site-packages/tornado/web.py", line 1162, in _execute_method
+        self._when_complete(method(*self.path_args, **self.path_kwargs),
+      File "/root/yeq/soft/SQL_Review/controllers/Review.py", line 96, in post
+        LoadAndClean().find_Load()
+    TypeError: find_Load() takes exactly 2 arguments (1 given)
+[E 140423 15:49:57 web:1635] 500 POST /review (192.168.11.207) 6.86ms
+[I 140423 15:49:57 web:1635] 200 GET /favicon.ico (192.168.11.207) 9.52ms
+[I 140423 15:51:59 autoreload:186] /root/yeq/soft/SQL_Review/controllers/Review.py modified; restarting server
+Traceback (most recent call last):
+  File "application.py", line 38, in <module>
+    http_server.listen(options.port)
+  File "/usr/lib/python2.6/site-packages/tornado/tcpserver.py", line 117, in listen
+    sockets = bind_sockets(port, address=address)
+  File "/usr/lib/python2.6/site-packages/tornado/netutil.py", line 90, in bind_sockets
+    sock.bind(sockaddr)
+  File "<string>", line 1, in bind
+socket.error: [Errno 98] Address already in use
+[E 140423 15:52:06 web:1228] Uncaught exception POST /review (192.168.11.207)
+    HTTPRequest(protocol='http', host='192.168.22.225:3000', method='POST', uri='/review', version='HTTP/1.1', remote_ip='192.168.11.207', headers={'Origin': 'http://192.168.22.225:3000', 'Content-Length': '31488', 'Accept-Language': 'zh-CN,zh;q=0.8,en;q=0.6', 'Accept-Encoding': 'gzip,deflate,sdch', 'Host': '192.168.22.225:3000', 'Accept': 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8', 'User-Agent': 'Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/34.0.1847.116 Safari/537.36', 'Connection': 'keep-alive', 'Referer': 'http://192.168.22.225:3000/review', 'Cache-Control': 'max-age=0', 'Cookie': '__utma=115224007.1620756413.1398155325.1398155325.1398155325.1; __utmc=115224007; __utmz=115224007.1398155325.1.1.utmcsr=(direct)|utmccn=(direct)|utmcmd=(none)', 'Content-Type': 'multipart/form-data; boundary=----WebKitFormBoundarydll2O1U7Ow4uQ9eC'})
+    Traceback (most recent call last):
+      File "/usr/lib/python2.6/site-packages/tornado/web.py", line 1141, in _when_complete
+        callback()
+      File "/usr/lib/python2.6/site-packages/tornado/web.py", line 1162, in _execute_method
+        self._when_complete(method(*self.path_args, **self.path_kwargs),
+      File "/root/yeq/soft/SQL_Review/controllers/Review.py", line 96, in post
+        LoadAndClean().find_Load(filepath)
+      File "/root/yeq/soft/SQL_Review/controllers/Review.py", line 27, in find_Load
+        MySQL.MysqlLoad().loadin(self.SqlTextIn)
+    AttributeError: LoadAndClean instance has no attribute 'SqlTextIn'
+[E 140423 15:52:06 web:1635] 500 POST /review (192.168.11.207) 7.27ms
+[I 140423 15:52:48 autoreload:186] /root/yeq/soft/SQL_Review/controllers/Review.py modified; restarting server
+Traceback (most recent call last):
+  File "application.py", line 38, in <module>
+    http_server.listen(options.port)
+  File "/usr/lib/python2.6/site-packages/tornado/tcpserver.py", line 117, in listen
+    sockets = bind_sockets(port, address=address)
+  File "/usr/lib/python2.6/site-packages/tornado/netutil.py", line 90, in bind_sockets
+    sock.bind(sockaddr)
+  File "<string>", line 1, in bind
+socket.error: [Errno 98] Address already in use
+[I 140423 15:52:55 web:1635] 200 POST /review (192.168.11.207) 1885.52ms
+[I 140423 15:52:55 web:1635] 304 GET /static/css/bootstrap.min.css?v=35fc838ce584c1eb81b3bebe245442d6 (192.168.11.207) 11.00ms
+[I 140423 15:52:55 web:1635] 304 GET /static/css/style.css?v=cae179ee550ce6579f5840f852f59dfe (192.168.11.207) 0.83ms
+[I 140423 15:52:55 web:1635] 304 GET /static/js/jquery.min.js?v=e6661cd3c4bc60b03deade3f51f2b3c6 (192.168.11.207) 1.16ms
+[I 140423 15:52:55 web:1635] 304 GET /static/js/bootstrap.min.js?v=353240ad37d1b084a53b1575f8ce57da (192.168.11.207) 0.90ms
+[I 140423 15:52:55 web:1635] 304 GET /static/js/bootstrap.file-input.js?v=e585107983524b88cb88f4d8429b70ae (192.168.11.207) 0.81ms
+[I 140423 16:01:25 autoreload:186] /root/yeq/soft/SQL_Review/controllers/Review.py modified; restarting server
+[I 140423 16:03:29 autoreload:186] /root/yeq/soft/SQL_Review/controllers/Review.py modified; restarting server
+[I 140423 16:03:42 web:1635] 200 POST /review (192.168.11.207) 1512.52ms
+[I 140423 16:08:43 autoreload:186] /root/yeq/soft/SQL_Review/controllers/Review.py modified; restarting server
+[I 140423 16:10:54 autoreload:186] /root/yeq/soft/SQL_Review/controllers/Review.py modified; restarting server
+Traceback (most recent call last):
+  File "application.py", line 11, in <module>
+    import Review
+  File "/root/yeq/soft/SQL_Review/controllers/Review.py", line 127
+    self.render('review.html',title='result_test',items=info,status=review_status)
+    ^
+IndentationError: unexpected unindent
+[I 140423 16:14:08 web:1635] 200 GET /review (192.168.11.207) 20.78ms
+[I 140423 16:14:08 web:1635] 304 GET /static/css/bootstrap.min.css?v=35fc838ce584c1eb81b3bebe245442d6 (192.168.11.207) 9.24ms
+[I 140423 16:14:08 web:1635] 304 GET /static/css/style.css?v=cae179ee550ce6579f5840f852f59dfe (192.168.11.207) 0.98ms
+[I 140423 16:14:08 web:1635] 304 GET /static/js/jquery.min.js?v=e6661cd3c4bc60b03deade3f51f2b3c6 (192.168.11.207) 1.31ms
+[I 140423 16:14:08 web:1635] 304 GET /static/js/bootstrap.min.js?v=353240ad37d1b084a53b1575f8ce57da (192.168.11.207) 0.96ms
+[I 140423 16:14:08 web:1635] 304 GET /static/js/bootstrap.file-input.js?v=e585107983524b88cb88f4d8429b70ae (192.168.11.207) 0.79ms
+[I 140423 16:14:12 web:1635] 200 POST /review (192.168.11.207) 16.43ms
+[I 140423 16:14:18 web:1635] 200 POST /review (192.168.11.207) 1813.01ms
+[I 140423 16:15:56 autoreload:186] /root/yeq/soft/SQL_Review/controllers/Review.py modified; restarting server
+[I 140423 16:16:14 web:1635] 200 POST /review (192.168.11.207) 1697.35ms
+[I 140423 16:18:19 autoreload:186] /root/yeq/soft/SQL_Review/controllers/Review.py modified; restarting server
+[E 140423 16:18:27 web:1228] Uncaught exception POST /review (192.168.11.207)
+    HTTPRequest(protocol='http', host='192.168.22.225:3000', method='POST', uri='/review', version='HTTP/1.1', remote_ip='192.168.11.207', headers={'Origin': 'http://192.168.22.225:3000', 'Content-Length': '31488', 'Accept-Language': 'zh-CN,zh;q=0.8,en;q=0.6', 'Accept-Encoding': 'gzip,deflate,sdch', 'Host': '192.168.22.225:3000', 'Accept': 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8', 'User-Agent': 'Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/34.0.1847.116 Safari/537.36', 'Connection': 'keep-alive', 'Referer': 'http://192.168.22.225:3000/review', 'Cache-Control': 'max-age=0', 'Cookie': '__utma=115224007.1620756413.1398155325.1398155325.1398155325.1; __utmc=115224007; __utmz=115224007.1398155325.1.1.utmcsr=(direct)|utmccn=(direct)|utmcmd=(none)', 'Content-Type': 'multipart/form-data; boundary=----WebKitFormBoundarymKqaEMBVIgnQBGkd'})
+    Traceback (most recent call last):
+      File "/usr/lib/python2.6/site-packages/tornado/web.py", line 1141, in _when_complete
+        callback()
+      File "/usr/lib/python2.6/site-packages/tornado/web.py", line 1162, in _execute_method
+        self._when_complete(method(*self.path_args, **self.path_kwargs),
+      File "/root/yeq/soft/SQL_Review/controllers/Review.py", line 127, in post
+        print Exception,ex
+    UnboundLocalError: local variable 'ex' referenced before assignment
+[E 140423 16:18:27 web:1635] 500 POST /review (192.168.11.207) 1474.98ms
+[I 140423 16:18:59 autoreload:186] /root/yeq/soft/SQL_Review/controllers/Review.py modified; restarting server
+[I 140423 16:19:07 web:1635] 200 POST /review (192.168.11.207) 1611.50ms
+[I 140423 16:20:08 autoreload:186] /root/yeq/soft/SQL_Review/controllers/Review.py modified; restarting server
+[I 140423 16:20:15 web:1635] 200 POST /review (192.168.11.207) 1843.80ms
+[I 140423 16:21:07 autoreload:186] /root/yeq/soft/SQL_Review/controllers/Review.py modified; restarting server
+[I 140423 16:21:19 web:1635] 200 POST /review (192.168.11.207) 1748.87ms
+[I 140423 16:26:52 autoreload:186] /root/yeq/soft/SQL_Review/controllers/Review.py modified; restarting server
+[I 140423 16:29:12 autoreload:186] /root/yeq/soft/SQL_Review/controllers/Review.py modified; restarting server
+[I 140423 16:41:54 autoreload:186] /root/yeq/soft/SQL_Review/controllers/MySQL.py modified; restarting server
+Traceback (most recent call last):
+  File "application.py", line 11, in <module>
+    import Review
+  File "/root/yeq/soft/SQL_Review/controllers/Review.py", line 9, in <module>
+    import MySQL
+  File "/root/yeq/soft/SQL_Review/controllers/MySQL.py", line 12, in <module>
+    now = time.localtime()
+NameError: name 'time' is not defined
+[E 140423 16:42:43 web:1228] Uncaught exception POST /review (192.168.11.207)
+    HTTPRequest(protocol='http', host='192.168.22.225:3000', method='POST', uri='/review', version='HTTP/1.1', remote_ip='192.168.11.207', headers={'Origin': 'http://192.168.22.225:3000', 'Content-Length': '31488', 'Accept-Language': 'zh-CN,zh;q=0.8,en;q=0.6', 'Accept-Encoding': 'gzip,deflate,sdch', 'Host': '192.168.22.225:3000', 'Accept': 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8', 'User-Agent': 'Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/34.0.1847.116 Safari/537.36', 'Connection': 'keep-alive', 'Referer': 'http://192.168.22.225:3000/review', 'Cache-Control': 'max-age=0', 'Cookie': '__utma=115224007.1620756413.1398155325.1398155325.1398155325.1; __utmc=115224007; __utmz=115224007.1398155325.1.1.utmcsr=(direct)|utmccn=(direct)|utmcmd=(none)', 'Content-Type': 'multipart/form-data; boundary=----WebKitFormBoundaryGIc3uuzGRhqCUV0Q'})
+    Traceback (most recent call last):
+      File "/usr/lib/python2.6/site-packages/tornado/web.py", line 1141, in _when_complete
+        callback()
+      File "/usr/lib/python2.6/site-packages/tornado/web.py", line 1162, in _execute_method
+        self._when_complete(method(*self.path_args, **self.path_kwargs),
+      File "/root/yeq/soft/SQL_Review/controllers/Review.py", line 99, in post
+        LoadAndClean().find_Load(filepath)
+      File "/root/yeq/soft/SQL_Review/controllers/Review.py", line 29, in find_Load
+        MySQL.MysqlLoad().loadin(tmpfile)
+      File "/root/yeq/soft/SQL_Review/controllers/MySQL.py", line 33, in loadin
+        MySQL.MysqlQuery().query_update('create database %s' %(dbName))
+    NameError: global name 'MySQL' is not defined
+[E 140423 16:42:43 web:1635] 500 POST /review (192.168.11.207) 684.14ms
+[I 140423 16:43:02 autoreload:186] /root/yeq/soft/SQL_Review/controllers/MySQL.py modified; restarting server
+[I 140423 16:43:08 web:1635] 200 POST /review (192.168.11.207) 1217.10ms
+[I 140423 16:43:12 web:1635] 200 POST /review (192.168.11.207) 1139.01ms
+[I 140423 16:46:17 autoreload:186] /root/yeq/soft/SQL_Review/controllers/MySQL.py modified; restarting server
+Traceback (most recent call last):
+  File "application.py", line 11, in <module>
+    import Review
+  File "/root/yeq/soft/SQL_Review/controllers/Review.py", line 9, in <module>
+    import MySQL
+  File "/root/yeq/soft/SQL_Review/controllers/MySQL.py", line 32
+    global dbName = 'DB_TMP'+str_now
+                  ^
+SyntaxError: invalid syntax
+/root/yeq/soft/SQL_Review/controllers/MySQL.py:71: Warning: Unknown table 'tb_avatar'
+  cur.execute(sqlCommand)
+/root/yeq/soft/SQL_Review/controllers/MySQL.py:71: Warning: Unknown table 'tb_comment_praise'
+  cur.execute(sqlCommand)
+/root/yeq/soft/SQL_Review/controllers/MySQL.py:71: Warning: Unknown table 'tb_comment_praise_log'
+  cur.execute(sqlCommand)
+/root/yeq/soft/SQL_Review/controllers/MySQL.py:71: Warning: Unknown table 'tb_company'
+  cur.execute(sqlCommand)
+/root/yeq/soft/SQL_Review/controllers/MySQL.py:71: Warning: Unknown table 'tb_company_alias'
+  cur.execute(sqlCommand)
+/root/yeq/soft/SQL_Review/controllers/MySQL.py:71: Warning: Unknown table 'tb_company_count'
+  cur.execute(sqlCommand)
+/root/yeq/soft/SQL_Review/controllers/MySQL.py:71: Warning: Unknown table 'tb_company_follow'
+  cur.execute(sqlCommand)
+/root/yeq/soft/SQL_Review/controllers/MySQL.py:71: Warning: Unknown table 'tb_company_follow_log'
+  cur.execute(sqlCommand)
+/root/yeq/soft/SQL_Review/controllers/MySQL.py:71: Warning: Unknown table 'tb_company_hot'
+  cur.execute(sqlCommand)
+/root/yeq/soft/SQL_Review/controllers/MySQL.py:71: Warning: Unknown table 'tb_company_search_log'
+  cur.execute(sqlCommand)
+/root/yeq/soft/SQL_Review/controllers/MySQL.py:71: Warning: Unknown table 'tb_expression'
+  cur.execute(sqlCommand)
+/root/yeq/soft/SQL_Review/controllers/MySQL.py:71: Warning: Unknown table 'tb_mood'
+  cur.execute(sqlCommand)
+/root/yeq/soft/SQL_Review/controllers/MySQL.py:71: Warning: Unknown table 'tb_mood_category'
+  cur.execute(sqlCommand)
+/root/yeq/soft/SQL_Review/controllers/MySQL.py:71: Warning: Unknown table 'tb_position_industry'
+  cur.execute(sqlCommand)
+/root/yeq/soft/SQL_Review/controllers/MySQL.py:71: Warning: Unknown table 'tb_post'
+  cur.execute(sqlCommand)
+/root/yeq/soft/SQL_Review/controllers/MySQL.py:71: Warning: Unknown table 'tb_post_comment'
+  cur.execute(sqlCommand)
+/root/yeq/soft/SQL_Review/controllers/MySQL.py:71: Warning: Unknown table 'tb_post_company'
+  cur.execute(sqlCommand)
+/root/yeq/soft/SQL_Review/controllers/MySQL.py:71: Warning: Unknown table 'tb_post_count'
+  cur.execute(sqlCommand)
+/root/yeq/soft/SQL_Review/controllers/MySQL.py:71: Warning: Unknown table 'tb_post_geo'
+  cur.execute(sqlCommand)
+/root/yeq/soft/SQL_Review/controllers/MySQL.py:71: Warning: Unknown table 'tb_post_praise'
+  cur.execute(sqlCommand)
+/root/yeq/soft/SQL_Review/controllers/MySQL.py:71: Warning: Unknown table 'tb_post_praise_log'
+  cur.execute(sqlCommand)
+/root/yeq/soft/SQL_Review/controllers/MySQL.py:71: Warning: Unknown table 'tb_post_topic'
+  cur.execute(sqlCommand)
+/root/yeq/soft/SQL_Review/controllers/MySQL.py:71: Warning: Unknown table 'tb_recommend_place'
+  cur.execute(sqlCommand)
+/root/yeq/soft/SQL_Review/controllers/MySQL.py:71: Warning: Unknown table 'tb_report_log'
+  cur.execute(sqlCommand)
+/root/yeq/soft/SQL_Review/controllers/MySQL.py:71: Warning: Unknown table 'tb_suggestion'
+  cur.execute(sqlCommand)
+/root/yeq/soft/SQL_Review/controllers/MySQL.py:71: Warning: Unknown table 'tb_topic'
+  cur.execute(sqlCommand)
+/root/yeq/soft/SQL_Review/controllers/MySQL.py:71: Warning: Unknown table 'tb_topic_hot'
+  cur.execute(sqlCommand)
+/root/yeq/soft/SQL_Review/controllers/MySQL.py:71: Warning: Unknown table 'tb_user'
+  cur.execute(sqlCommand)
+/root/yeq/soft/SQL_Review/controllers/MySQL.py:71: Warning: Unknown table 'tb_user_bind'
+  cur.execute(sqlCommand)
+/root/yeq/soft/SQL_Review/controllers/MySQL.py:71: Warning: Unknown table 'tb_user_count'
+  cur.execute(sqlCommand)
+/root/yeq/soft/SQL_Review/controllers/MySQL.py:71: Warning: Unknown table 'tb_user_device_token'
+  cur.execute(sqlCommand)
+/root/yeq/soft/SQL_Review/controllers/MySQL.py:71: Warning: Unknown table 'tb_user_message'
+  cur.execute(sqlCommand)
+/root/yeq/soft/SQL_Review/controllers/MySQL.py:71: Warning: Unknown table 'tb_user_message_info'
+  cur.execute(sqlCommand)
+/root/yeq/soft/SQL_Review/controllers/MySQL.py:71: Warning: Unknown table 'tb_user_setting'
+  cur.execute(sqlCommand)
+[I 140423 16:49:41 web:1635] 200 POST /review (192.168.11.207) 1866.10ms
+[I 140423 17:26:03 web:1635] 304 GET /rule (192.168.11.207) 18.91ms
+[I 140423 17:26:04 web:1635] 304 GET / (192.168.11.207) 13.18ms
+[I 140423 17:26:05 web:1635] 200 GET /review (192.168.11.207) 15.39ms
+[I 140423 17:26:06 web:1635] 304 GET /rule (192.168.11.207) 16.54ms
+[I 140423 17:26:07 web:1635] 304 GET /review (192.168.11.207) 16.16ms
+[I 140423 17:26:08 web:1635] 304 GET / (192.168.11.207) 13.40ms
+[I 140423 17:26:08 web:1635] 304 GET /rule (192.168.11.207) 16.36ms
+[I 140423 17:26:09 web:1635] 304 GET /review (192.168.11.207) 15.31ms
+[I 140423 17:26:10 web:1635] 304 GET / (192.168.11.207) 14.80ms
+[I 140423 17:26:10 web:1635] 304 GET /rule (192.168.11.207) 16.78ms
+[I 140423 17:26:11 web:1635] 304 GET /review (192.168.11.207) 15.62ms
+[I 140423 17:26:11 web:1635] 304 GET / (192.168.11.207) 13.05ms
+[I 140423 17:26:12 web:1635] 304 GET /review (192.168.11.207) 15.14ms
+[I 140423 17:26:12 web:1635] 304 GET /rule (192.168.11.207) 16.49ms
+[I 140423 17:26:45 web:1635] 304 GET / (192.168.11.207) 13.57ms
+[I 140423 17:26:46 web:1635] 304 GET /review (192.168.11.207) 15.45ms
+[I 140423 17:26:47 web:1635] 304 GET / (192.168.11.207) 14.10ms
+[I 140423 17:26:48 web:1635] 304 GET /review (192.168.11.207) 15.44ms
+[I 140423 17:26:49 web:1635] 304 GET / (192.168.11.207) 13.01ms
+[I 140423 17:26:50 web:1635] 304 GET /review (192.168.11.207) 16.05ms
+[I 140423 17:26:51 web:1635] 304 GET /rule (192.168.11.207) 16.50ms
+[I 140423 17:26:53 web:1635] 304 GET /review (192.168.11.207) 15.24ms
+[I 140423 17:26:53 web:1635] 304 GET / (192.168.11.207) 12.96ms
+[I 140423 17:26:54 web:1635] 304 GET /review (192.168.11.207) 14.97ms
+[I 140423 17:26:54 web:1635] 304 GET /rule (192.168.11.207) 15.74ms
+[I 140423 17:26:57 web:1635] 304 GET /review (192.168.11.207) 15.23ms
+[I 140423 17:26:57 web:1635] 304 GET / (192.168.11.207) 12.84ms
+[I 140423 17:26:58 web:1635] 304 GET /review (192.168.11.207) 14.82ms
+[I 140423 17:26:59 web:1635] 304 GET /rule (192.168.11.207) 16.52ms
+[I 140423 17:33:24 web:1635] 304 GET /review (192.168.11.207) 14.96ms
+[I 140423 17:33:29 web:1635] 200 POST /review (192.168.11.207) 1703.70ms
+[I 140423 18:04:20 web:1635] 200 POST /review (192.168.11.207) 2415.08ms
+[I 140423 18:26:40 web:1635] 200 POST /review (192.168.11.207) 15.92ms
+[I 140423 18:31:32 web:1635] 304 GET / (192.168.11.207) 13.63ms
+[I 140423 18:31:32 web:1635] 200 GET /review (192.168.11.207) 15.45ms
+[I 140423 18:31:33 web:1635] 304 GET /rule (192.168.11.207) 16.95ms
+[I 140423 18:31:35 web:1635] 304 GET / (192.168.11.207) 13.54ms
+[I 140423 18:31:36 web:1635] 304 GET /review (192.168.11.207) 15.71ms
+[I 140423 18:31:36 web:1635] 304 GET /rule (192.168.11.207) 17.00ms
+[I 140423 18:31:38 web:1635] 304 GET /rule (192.168.11.207) 16.34ms
+[I 140423 18:31:38 web:1635] 304 GET /review (192.168.11.207) 15.49ms
+[I 140423 18:31:39 web:1635] 304 GET / (192.168.11.207) 12.99ms
+[I 140423 18:33:01 web:1635] 304 GET /review (192.168.11.207) 16.17ms
+[I 140423 18:33:02 web:1635] 304 GET /rule (192.168.11.207) 17.95ms
+[I 140423 18:33:03 web:1635] 304 GET /rule (192.168.11.207) 16.65ms
+[I 140423 18:33:04 web:1635] 304 GET /review (192.168.11.207) 15.48ms
+[I 140423 18:33:04 web:1635] 304 GET / (192.168.11.207) 12.94ms
+[I 140423 18:33:05 web:1635] 304 GET /review (192.168.11.207) 15.45ms
+[I 140423 18:33:06 web:1635] 304 GET /rule (192.168.11.207) 17.40ms
+[I 140423 18:33:07 web:1635] 304 GET /review (192.168.11.207) 15.49ms
+[I 140423 18:33:08 web:1635] 304 GET / (192.168.11.207) 13.22ms
+[I 140423 18:33:08 web:1635] 304 GET /review (192.168.11.207) 15.22ms
+[I 140423 18:33:09 web:1635] 304 GET /rule (192.168.11.207) 17.68ms
+[I 140423 18:33:09 web:1635] 304 GET /review (192.168.11.207) 15.19ms
+[I 140423 18:33:10 web:1635] 304 GET / (192.168.11.207) 13.31ms
+[I 140423 18:33:11 web:1635] 304 GET /review (192.168.11.207) 14.99ms
+[I 140423 18:33:11 web:1635] 304 GET /rule (192.168.11.207) 16.93ms
+[I 140423 18:33:12 web:1635] 304 GET /review (192.168.11.207) 16.19ms
+[I 140423 18:33:12 web:1635] 304 GET / (192.168.11.207) 13.04ms
+[I 140423 18:33:13 web:1635] 304 GET /rule (192.168.11.207) 17.74ms
+[I 140423 18:33:14 web:1635] 304 GET /review (192.168.11.207) 14.88ms
+[I 140423 18:33:14 web:1635] 304 GET / (192.168.11.207) 13.34ms
+[I 140424 09:55:06 web:1635] 304 GET / (192.168.11.207) 13.43ms
+[I 140424 09:55:06 web:1635] 304 GET /static/css/bootstrap.min.css?v=35fc838ce584c1eb81b3bebe245442d6 (192.168.11.207) 10.33ms
+[I 140424 09:55:06 web:1635] 304 GET /static/css/style.css?v=cae179ee550ce6579f5840f852f59dfe (192.168.11.207) 0.79ms
+[I 140424 09:55:06 web:1635] 304 GET /static/js/jquery.min.js?v=e6661cd3c4bc60b03deade3f51f2b3c6 (192.168.11.207) 1.06ms
+[I 140424 09:55:06 web:1635] 304 GET /static/js/bootstrap.min.js?v=353240ad37d1b084a53b1575f8ce57da (192.168.11.207) 0.88ms
+[I 140424 09:55:06 web:1635] 304 GET /static/js/bootstrap.file-input.js?v=e585107983524b88cb88f4d8429b70ae (192.168.11.207) 0.80ms
+[I 140424 09:55:07 web:1635] 304 GET /review (192.168.11.207) 15.54ms
+[I 140424 09:55:09 web:1635] 200 POST /review (192.168.11.207) 15.46ms
+/root/yeq/soft/SQL_Review/controllers/MySQL.py:71: Warning: Unknown table 'tb_activity_video'
+  cur.execute(sqlCommand)
+[I 140424 10:10:41 web:1635] 200 POST /review (192.168.11.207) 166.08ms
+[I 140424 10:10:41 web:1635] 304 GET /static/js/jquery.min.js?v=e6661cd3c4bc60b03deade3f51f2b3c6 (192.168.11.207) 2.16ms
+[I 140424 10:10:41 web:1635] 304 GET /static/js/bootstrap.min.js?v=353240ad37d1b084a53b1575f8ce57da (192.168.11.207) 1.03ms
+[I 140424 10:10:41 web:1635] 304 GET /static/js/bootstrap.file-input.js?v=e585107983524b88cb88f4d8429b70ae (192.168.11.207) 0.81ms
+ERROR 1064 (42000) at line 13 in file: '/root/yeq/soft/SQL_Review/tmp/tmpfile20140423164934': You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'tb_activity_video_marking对应sql
+CREATE TABLE `tb_activity_video_marking` (
+  ' at line 1
+[I 140424 10:11:22 web:1635] 200 POST /review (192.168.11.207) 149.43ms
+[I 140424 10:11:33 web:1635] 200 POST /review (192.168.11.207) 17.01ms
+ERROR 1050 (42S01) at line 1 in file: '/root/yeq/soft/SQL_Review/tmp/tmpfile20140423164934': Table 'tb_activity_video' already exists
+[I 140424 10:11:36 web:1635] 200 POST /review (192.168.11.207) 117.40ms
+[I 140424 10:11:44 web:1635] 200 POST /review (192.168.11.207) 16.32ms
+[I 140424 10:11:45 web:1635] 200 POST /review (192.168.11.207) 16.23ms
+[I 140424 10:11:45 web:1635] 200 POST /review (192.168.11.207) 15.37ms
+[I 140424 10:11:45 web:1635] 200 POST /review (192.168.11.207) 15.29ms
+ERROR 1050 (42S01) at line 1 in file: '/root/yeq/soft/SQL_Review/tmp/tmpfile20140423164934': Table 'tb_activity_video' already exists
+[I 140424 10:12:01 web:1635] 200 POST /review (192.168.11.207) 117.82ms
+[I 140424 10:13:05 autoreload:186] /root/yeq/soft/SQL_Review/controllers/ReviewPart.py modified; restarting server
+Traceback (most recent call last):
+  File "application.py", line 11, in <module>
+    import Review
+  File "/root/yeq/soft/SQL_Review/controllers/Review.py", line 10, in <module>
+    import ReviewPart
+  File "/root/yeq/soft/SQL_Review/controllers/ReviewPart.py", line 86
+    if col_info[3] == 'id' or col_info[3] == 'ID' col_info[18] != '':
+                                                         ^
+SyntaxError: invalid syntax
+/root/yeq/soft/SQL_Review/controllers/MySQL.py:71: Warning: Unknown table 'tb_activity_enroll'
+  cur.execute(sqlCommand)
+/root/yeq/soft/SQL_Review/controllers/MySQL.py:71: Warning: Unknown table 'tb_activity_video_marking'
+  cur.execute(sqlCommand)
+[I 140424 10:14:37 web:1635] 200 POST /review (192.168.11.207) 253.77ms
+[I 140424 10:16:42 autoreload:186] /root/yeq/soft/SQL_Review/controllers/ReviewPart.py modified; restarting server
+[I 140424 10:16:52 web:1635] 200 POST /review (192.168.11.207) 251.75ms
+[I 140424 10:16:52 web:1635] 304 GET /static/css/bootstrap.min.css?v=35fc838ce584c1eb81b3bebe245442d6 (192.168.11.207) 10.80ms
+[I 140424 10:16:52 web:1635] 304 GET /static/css/style.css?v=cae179ee550ce6579f5840f852f59dfe (192.168.11.207) 1.05ms
+[I 140424 10:16:52 web:1635] 304 GET /static/js/jquery.min.js?v=e6661cd3c4bc60b03deade3f51f2b3c6 (192.168.11.207) 1.25ms
+[I 140424 10:16:52 web:1635] 304 GET /static/js/bootstrap.min.js?v=353240ad37d1b084a53b1575f8ce57da (192.168.11.207) 0.90ms
+[I 140424 10:16:52 web:1635] 304 GET /static/js/bootstrap.file-input.js?v=e585107983524b88cb88f4d8429b70ae (192.168.11.207) 0.80ms
+[I 140424 10:25:35 autoreload:186] /root/yeq/soft/SQL_Review/controllers/ReviewPart.py modified; restarting server
+[I 140424 10:25:51 autoreload:186] /root/yeq/soft/SQL_Review/controllers/RulePart.py modified; restarting server
+[I 140424 10:25:58 web:1635] 200 POST /review (192.168.11.207) 263.63ms
+[I 140424 10:25:58 web:1635] 304 GET /static/css/bootstrap.min.css?v=35fc838ce584c1eb81b3bebe245442d6 (192.168.11.207) 15.52ms
+[I 140424 10:25:58 web:1635] 304 GET /static/css/style.css?v=cae179ee550ce6579f5840f852f59dfe (192.168.11.207) 0.89ms
+[I 140424 10:25:58 web:1635] 304 GET /static/js/jquery.min.js?v=e6661cd3c4bc60b03deade3f51f2b3c6 (192.168.11.207) 1.24ms
+[I 140424 10:25:58 web:1635] 304 GET /static/js/bootstrap.min.js?v=353240ad37d1b084a53b1575f8ce57da (192.168.11.207) 0.91ms
+[I 140424 10:25:58 web:1635] 304 GET /static/js/bootstrap.file-input.js?v=e585107983524b88cb88f4d8429b70ae (192.168.11.207) 0.77ms
+[I 140424 10:26:30 web:1635] 304 GET /rule (192.168.11.207) 17.28ms
+[I 140424 10:26:30 web:1635] 304 GET / (192.168.11.207) 13.35ms
+[I 140424 10:26:31 web:1635] 200 GET /review (192.168.11.207) 15.50ms
+[I 140424 10:26:32 web:1635] 304 GET /rule (192.168.11.207) 16.36ms
+[I 140424 10:26:33 web:1635] 304 GET /review (192.168.11.207) 15.30ms
+[I 140424 10:26:33 web:1635] 304 GET / (192.168.11.207) 13.49ms
+[I 140424 10:26:34 web:1635] 304 GET /review (192.168.11.207) 15.25ms
+[I 140424 10:26:35 web:1635] 304 GET /rule (192.168.11.207) 16.95ms
+[I 140424 10:26:36 web:1635] 304 GET / (192.168.11.207) 13.37ms
+[I 140424 10:26:37 web:1635] 304 GET /review (192.168.11.207) 15.78ms
+[I 140424 10:26:37 web:1635] 304 GET /rule (192.168.11.207) 17.15ms
+[I 140424 10:44:25 autoreload:186] /root/yeq/soft/SQL_Review/controllers/MySQL.py modified; restarting server
+[I 140424 10:46:18 autoreload:186] /root/yeq/soft/SQL_Review/controllers/Review.py modified; restarting server
+[I 140424 10:46:39 web:1635] 304 GET /review (192.168.11.207) 20.67ms
+[I 140424 10:46:42 web:1635] 200 POST /review (192.168.11.207) 304.75ms
+ERROR 1050 (42S01) at line 1 in file: '/root/yeq/soft/SQL_Review/tmp/tmpfile20140424104618': Table 'tb_comment_praise_log' already exists
+[I 140424 10:46:57 web:1635] 200 POST /review (192.168.11.207) 103.11ms
+ERROR 1075 (42000) at line 1 in file: '/root/yeq/soft/SQL_Review/tmp/tmpfile20140424104618': Incorrect table definition; there can be only one auto column and it must be defined as a key
+[I 140424 10:47:11 web:1635] 200 POST /review (192.168.11.207) 129.96ms
+ERROR 1075 (42000) at line 1 in file: '/root/yeq/soft/SQL_Review/tmp/tmpfile20140424104618': Incorrect table definition; there can be only one auto column and it must be defined as a key
+[I 140424 10:47:32 web:1635] 200 POST /review (192.168.11.207) 124.31ms
+ERROR 1050 (42S01) at line 1 in file: '/root/yeq/soft/SQL_Review/tmp/tmpfile20140424104618': Table 'tb_comment_praise_log' already exists
+[I 140424 10:48:34 web:1635] 200 POST /review (192.168.11.207) 92.52ms
+[I 140424 10:48:43 web:1635] 304 GET / (192.168.11.207) 13.59ms
+[I 140424 10:48:43 web:1635] 200 GET /review (192.168.11.207) 15.60ms
+ERROR 1050 (42S01) at line 1 in file: '/root/yeq/soft/SQL_Review/tmp/tmpfile20140424104618': Table 'tb_comment_praise_log' already exists
+[I 140424 10:48:46 web:1635] 200 POST /review (192.168.11.207) 101.91ms
+[I 140424 10:53:01 autoreload:186] /root/yeq/soft/SQL_Review/controllers/Review.py modified; restarting server
+ERROR 1064 (42000) at line 1 in file: '/root/yeq/soft/SQL_Review/tmp/tmpfile20140424105301': You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'MySQL.tmpDB' at line 1
+[I 140424 10:53:05 web:1635] 200 POST /review (192.168.11.207) 133.01ms
+[I 140424 10:53:14 web:1635] 200 POST /review (192.168.11.207) 258.21ms
+[I 140424 10:53:16 web:1635] 200 POST /review (192.168.11.207) 22.68ms
+ERROR 1050 (42S01) at line 1 in file: '/root/yeq/soft/SQL_Review/tmp/tmpfile20140424105301': Table 'tb_comment_praise_log' already exists
+[I 140424 10:53:19 web:1635] 200 POST /review (192.168.11.207) 973.03ms
+ERROR 1050 (42S01) at line 1 in file: '/root/yeq/soft/SQL_Review/tmp/tmpfile20140424105301': Table 'tb_comment_praise_log' already exists
+[I 140424 10:53:19 web:1635] 200 POST /review (192.168.11.207) 285.88ms
+[I 140424 10:53:20 web:1635] 200 POST /review (192.168.11.207) 17.10ms
+[I 140424 10:53:20 web:1635] 200 POST /review (192.168.11.207) 15.65ms
+ERROR 1050 (42S01) at line 1 in file: '/root/yeq/soft/SQL_Review/tmp/tmpfile20140424105301': Table 'tb_comment_praise_log' already exists
+[I 140424 10:53:33 web:1635] 200 POST /review (192.168.11.207) 145.44ms
+ERROR 1050 (42S01) at line 1 in file: '/root/yeq/soft/SQL_Review/tmp/tmpfile20140424105301': Table 'tb_comment_praise_log' already exists
+[I 140424 10:53:37 web:1635] 200 POST /review (192.168.11.207) 108.35ms
+[I 140424 10:55:32 autoreload:186] /root/yeq/soft/SQL_Review/controllers/Review.py modified; restarting server
+[I 140424 10:55:39 web:1635] 200 POST /review (192.168.11.207) 2455.90ms
+[I 140424 10:55:49 web:1635] 200 POST /review (192.168.11.207) 16.35ms
+[I 140424 10:55:55 web:1635] 200 POST /review (192.168.11.207) 2130.25ms
+[I 140424 10:56:45 web:1635] 200 POST /review (192.168.11.207) 1735.00ms
+[I 140424 10:56:54 web:1635] 200 POST /review (192.168.11.207) 17.02ms
+[I 140424 10:57:12 web:1635] 200 POST /review (192.168.11.207) 1984.52ms
+[I 140424 10:57:16 web:1635] 200 POST /review (192.168.11.207) 16.21ms
+[I 140424 10:57:25 web:1635] 200 POST /review (192.168.11.207) 1990.19ms
+[I 140424 10:57:28 web:1635] 200 POST /review (192.168.11.207) 16.38ms
+ERROR 1050 (42S01) at line 1 in file: '/root/yeq/soft/SQL_Review/tmp/tmpfile20140424105533': Table 'tb_comment_praise_log' already exists
+[I 140424 10:58:11 web:1635] 200 POST /review (192.168.11.207) 686.69ms
+[I 140424 10:58:24 web:1635] 200 POST /review (192.168.11.207) 120.98ms
+[I 140424 10:58:25 web:1635] 200 POST /review (192.168.11.207) 16.36ms
+[I 140424 10:58:26 web:1635] 200 POST /review (192.168.11.207) 15.76ms
+ERROR 1050 (42S01) at line 1 in file: '/root/yeq/soft/SQL_Review/tmp/tmpfile20140424105533': Table 'tb_comment_praise_log' already exists
+[I 140424 10:58:28 web:1635] 200 POST /review (192.168.11.207) 92.43ms
+ERROR 1050 (42S01) at line 1 in file: '/root/yeq/soft/SQL_Review/tmp/tmpfile20140424105533': Table 'tb_comment_praise_log' already exists
+[I 140424 10:58:30 web:1635] 200 POST /review (192.168.11.207) 98.31ms
+[I 140424 11:01:37 web:1635] 200 POST /review (192.168.11.207) 1603.15ms
+[I 140424 11:01:43 web:1635] 200 POST /review (192.168.11.207) 1640.53ms
+[I 140424 11:01:46 web:1635] 200 POST /review (192.168.11.207) 16.11ms
+[I 140424 11:01:50 web:1635] 200 POST /review (192.168.11.207) 1642.53ms
+[I 140424 11:01:56 web:1635] 200 POST /review (192.168.11.207) 1995.46ms
+ERROR 1050 (42S01) at line 1 in file: '/root/yeq/soft/SQL_Review/tmp/tmpfile20140424105533': Table 'tb_comment_praise_log' already exists
+[I 140424 11:02:09 web:1635] 200 POST /review (192.168.11.207) 632.85ms
+ERROR 1050 (42S01) at line 1 in file: '/root/yeq/soft/SQL_Review/tmp/tmpfile20140424105533': Table 'tb_comment_praise_log' already exists
+[I 140424 11:02:13 web:1635] 200 POST /review (192.168.11.207) 613.59ms
+[I 140424 11:02:15 web:1635] 200 POST /review (192.168.11.207) 16.11ms
+ERROR 1050 (42S01) at line 1 in file: '/root/yeq/soft/SQL_Review/tmp/tmpfile20140424105533': Table 'tb_comment_praise_log' already exists
+<type 'exceptions.Exception'> 'file'
+<type 'exceptions.Exception'> local variable 'filepath' referenced before assignment
+<type 'exceptions.Exception'> Destination path '/root/yeq/soft/SQL_Review/controllers/../sqlfile/tusimodify.sql20140424105533' already exists
+<type 'exceptions.Exception'> : (1007, "Can't create database 'DB_TMP20140424105533'; database exists")
+<type 'exceptions.Exception'> 'file'
+<type 'exceptions.Exception'> local variable 'filepath' referenced before assignment
+<type 'exceptions.Exception'> Destination path '/root/yeq/soft/SQL_Review/controllers/../sqlfile/tusimodify.sql20140424105533' already exists
+<type 'exceptions.Exception'> 'file'
+<type 'exceptions.Exception'> local variable 'filepath' referenced before assignment
+<type 'exceptions.Exception'> : (1007, "Can't create database 'DB_TMP20140424105533'; database exists")
+<type 'exceptions.Exception'> Destination path '/root/yeq/soft/SQL_Review/controllers/../sqlfile/tusimodify.sql20140424105533' already exists
+<type 'exceptions.Exception'> 'file'
+<type 'exceptions.Exception'> local variable 'filepath' referenced before assignment
+<type 'exceptions.Exception'> 'file'
+<type 'exceptions.Exception'> : (1007, "Can't create database 'DB_TMP20140424105533'; database exists")
+<type 'exceptions.Exception'> 'file'
+<type 'exceptions.Exception'> Destination path '/root/yeq/soft/SQL_Review/controllers/../sqlfile/tmpfile20140424105533' already exists
+<type 'exceptions.Exception'> 'file'
+<type 'exceptions.Exception'> local variable 'filepath' referenced before assignment
+<type 'exceptions.Exception'> 'file'
+<type 'exceptions.Exception'> local variable 'filepath' referenced before assignment
+<type 'exceptions.Exception'> 'file'
+<type 'exceptions.Exception'> : (1007, "Can't create database 'DB_TMP20140424105533'; database exists")
+<type 'exceptions.Exception'> Destination path '/root/yeq/soft/SQL_Review/controllers/../sqlfile/tmpfile20140424105533' already exists
+<type 'exceptions.Exception'> 'file'
+<type 'exceptions.Exception'> : (1007, "Can't create database 'DB_TMP20140424105533'; database exists")
+<type 'exceptions.Exception'> Destination path '/root/yeq/soft/SQL_Review/controllers/../sqlfile/tmpfile20140424105533' already exists
+<type 'exceptions.Exception'> Destination path '/root/yeq/soft/SQL_Review/controllers/../sqlfile/DB_TUSI.sql20140424105533' already exists
+<type 'exceptions.Exception'> : (1007, "Can't create database 'DB_TMP20140424105533'; database exists")
+<type 'exceptions.Exception'> Destination path '/root/yeq/soft/SQL_Review/controllers/../sqlfile/DB_TUSI.sql20140424105533' already exists
+<type 'exceptions.Exception'> 'file'
+<type 'exceptions.Exception'> local variable 'filepath' referenced before assignment
+<type 'exceptions.Exception'> : (1007, "Can't create database 'DB_TMP20140424105533'; database exists")
+<type 'exceptions.Exception'> Destination path '/root/yeq/soft/SQL_Review/controllers/../sqlfile/DB_TUSI.sql20140424105533' already exists
+<type 'exceptions.Exception'> : (1007, "Can't create database 'DB_TMP20140424105533'; database exists")
+<type 'exceptions.Exception'> Destination path '/root/yeq/soft/SQL_Review/controllers/../sqlfile/tusimodify.sql20140424105533' already exists
+<type 'exceptions.Exception'> 'file'
+<type 'exceptions.Exception'> : (1007, "Can't create database 'DB_TMP20140424105533'; database exists")
+<type 'exceptions.Exception'> Destination path '/root/yeq/soft/SQL_Review/controllers/../sqlfile/tmpfile20140424105533' already exists
+<type 'exceptions.Exception'> 'file'
+<type 'exceptions.Exception'> : (1007, "Can't create database 'DB_TMP20140424105533'; database exists")
+<type 'exceptions.Exception'> Destination path '/root/yeq/soft/SQL_Review/controllers/../sqlfile/tmpfile20140424105533' already exists
+<type 'exceptions.Exception'> 'file'
+<type 'exceptions.Exception'> local variable 'filepath' referenced before assignment
+<type 'exceptions.Exception'> 'file'
+<type 'exceptions.Exception'> : (1007, "Can't create database 'DB_TMP20140424105533'; database exists")
+<type 'exceptions.Exception'> Destination path '/root/yeq[I 140424 11:02:17 web:1635] 200 POST /review (192.168.11.207) 626.39ms
+[I 140424 11:02:20 web:1635] 200 POST /review (192.168.11.207) 15.72ms
+ERROR 1050 (42S01) at line 1 in file: '/root/yeq/soft/SQL_Review/tmp/tmpfile20140424105533': Table 'tb_comment_praise_log' already exists
+[I 140424 11:02:22 web:1635] 200 POST /review (192.168.11.207) 680.04ms
+[I 140424 11:02:24 web:1635] 200 POST /review (192.168.11.207) 16.37ms
+[I 140424 11:02:24 web:1635] 200 POST /review (192.168.11.207) 15.39ms
+[I 140424 11:02:25 web:1635] 200 POST /review (192.168.11.207) 17.11ms
+[I 140424 11:02:25 web:1635] 200 POST /review (192.168.11.207) 15.51ms
+[I 140424 11:09:09 autoreload:186] /root/yeq/soft/SQL_Review/controllers/MySQL.py modified; restarting server
+[I 140424 11:10:34 autoreload:186] /root/yeq/soft/SQL_Review/controllers/MySQL.py modified; restarting server
+[I 140424 11:14:08 autoreload:186] /root/yeq/soft/SQL_Review/controllers/MySQL.py modified; restarting server
+[I 140424 11:14:13 web:1635] 200 POST /review (192.168.11.207) 22.02ms
+[I 140424 11:14:23 web:1635] 200 POST /review (192.168.11.207) 1709.59ms
+[I 140424 11:14:48 web:1635] 200 POST /review (192.168.11.207) 1546.10ms
+[I 140424 11:15:00 web:1635] 200 POST /review (192.168.11.207) 2017.45ms
+[I 140424 11:15:08 web:1635] 200 POST /review (192.168.11.207) 140.28ms
+[I 140424 11:15:27 web:1635] 200 POST /review (192.168.11.207) 101.19ms
+[I 140424 11:16:12 web:1635] 200 POST /review (192.168.11.207) 1580.14ms
+[I 140424 11:16:18 web:1635] 200 POST /review (192.168.11.207) 16.50ms
+[I 140424 11:16:26 web:1635] 200 POST /review (192.168.11.207) 1960.11ms
+[I 140424 11:22:35 web:1635] 200 POST /review (192.168.11.207) 16.05ms
+[I 140424 11:22:40 web:1635] 200 POST /review (192.168.11.207) 1653.42ms
+[I 140424 11:23:28 autoreload:186] /root/yeq/soft/SQL_Review/controllers/Review.py modified; restarting server
+[I 140424 11:23:35 web:1635] 200 POST /review (192.168.11.207) 2058.57ms
+[I 140424 11:26:30 web:1635] 200 POST /review (192.168.11.207) 16.52ms
+[I 140424 11:26:39 web:1635] 200 POST /review (192.168.11.207) 1576.78ms
+[I 140424 11:36:07 autoreload:186] /root/yeq/soft/SQL_Review/controllers/Review.py modified; restarting server
+[I 140424 11:36:12 web:1635] 200 POST /review (192.168.11.207) 23.03ms
+[I 140424 11:36:23 web:1635] 200 POST /review (192.168.11.207) 1692.63ms
+ERROR 1064 (42000) at line 1 in file: '/root/yeq/soft/SQL_Review/tmp/tmpfile20140424113608': You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'MySQL.tmpDB' at line 1
+[I 140424 11:44:11 web:1635] 200 POST /review (192.168.11.207) 103.83ms
+[I 140424 11:44:11 web:1635] 304 GET /static/js/jquery.min.js?v=e6661cd3c4bc60b03deade3f51f2b3c6 (192.168.11.207) 11.05ms
+[I 140424 11:44:33 web:1635] 200 POST /review (192.168.11.207) 103.58ms
+[I 140424 11:46:13 autoreload:186] /root/yeq/soft/SQL_Review/controllers/Review.py modified; restarting server
+[I 140424 11:46:36 web:1635] 200 POST /review (192.168.11.207) 131.74ms
+[I 140424 11:49:49 autoreload:186] /root/yeq/soft/SQL_Review/controllers/Review.py modified; restarting server
+[I 140424 11:49:59 web:1635] 200 POST /review (192.168.11.207) 139.45ms
+[I 140424 11:51:08 autoreload:186] /root/yeq/soft/SQL_Review/controllers/Review.py modified; restarting server
+[I 140424 11:51:18 web:1635] 304 GET / (192.168.11.207) 18.43ms
+[I 140424 11:51:18 web:1635] 200 GET /review (192.168.11.207) 17.25ms
+[I 140424 11:51:19 web:1635] 200 POST /review (192.168.11.207) 15.52ms
+[I 140424 11:51:25 web:1635] 200 POST /review (192.168.11.207) 1663.53ms
+[I 140424 11:53:34 web:1635] 304 GET /rule (192.168.11.207) 17.01ms
+[I 140424 11:53:35 web:1635] 200 GET /review (192.168.11.207) 16.89ms
+[I 140424 11:53:36 web:1635] 304 GET / (192.168.11.207) 13.21ms
+[I 140424 11:53:37 web:1635] 304 GET /review (192.168.11.207) 15.48ms
+[I 140424 11:53:37 web:1635] 304 GET /rule (192.168.11.207) 15.89ms
+[I 140424 11:55:18 autoreload:186] /root/yeq/soft/SQL_Review/controllers/Review.py modified; restarting server
+[I 140424 11:55:24 web:1635] 304 GET /review (192.168.11.207) 20.72ms
+[I 140424 11:55:28 web:1635] 200 POST /review (192.168.11.207) 1724.66ms
+[I 140424 11:56:46 web:1635] 200 POST /review (192.168.11.207) 108.88ms
+[I 140424 11:57:30 web:1635] 200 POST /review (192.168.11.207) 91.83ms
+[I 140424 11:58:26 autoreload:186] /root/yeq/soft/SQL_Review/controllers/Review.py modified; restarting server
+[E 140424 11:58:35 web:1228] Uncaught exception POST /review (192.168.11.207)
+    HTTPRequest(protocol='http', host='192.168.22.225:3000', method='POST', uri='/review', version='HTTP/1.1', remote_ip='192.168.11.207', headers={'Origin': 'http://192.168.22.225:3000', 'Content-Length': '796', 'Accept-Language': 'zh-CN,zh;q=0.8,en;q=0.6', 'Accept-Encoding': 'gzip,deflate,sdch', 'Host': '192.168.22.225:3000', 'Accept': 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8', 'User-Agent': 'Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/34.0.1847.116 Safari/537.36', 'Connection': 'keep-alive', 'Referer': 'http://192.168.22.225:3000/review', 'Cache-Control': 'max-age=0', 'Cookie': '__utma=115224007.1620756413.1398155325.1398155325.1398155325.1; __utmc=115224007; __utmz=115224007.1398155325.1.1.utmcsr=(direct)|utmccn=(direct)|utmcmd=(none)', 'Content-Type': 'multipart/form-data; boundary=----WebKitFormBoundary2XbD9DBHIT7W2qYL'})
+    Traceback (most recent call last):
+      File "/usr/lib/python2.6/site-packages/tornado/web.py", line 1141, in _when_complete
+        callback()
+      File "/usr/lib/python2.6/site-packages/tornado/web.py", line 1162, in _execute_method
+        self._when_complete(method(*self.path_args, **self.path_kwargs),
+      File "/root/yeq/soft/SQL_Review/controllers/Review.py", line 78, in post
+        LoadAndClean().dropTmpDB(db)
+      File "/root/yeq/soft/SQL_Review/controllers/Review.py", line 45, in dropTmpDB
+        MySQL.MysqlQuery().query_update('drop database %s' %(self.db))
+    AttributeError: LoadAndClean instance has no attribute 'db'
+[E 140424 11:58:35 web:1635] 500 POST /review (192.168.11.207) 111.25ms
+[I 140424 11:59:17 autoreload:186] /root/yeq/soft/SQL_Review/controllers/Review.py modified; restarting server
+[I 140424 11:59:24 web:1635] 200 POST /review (192.168.11.207) 137.92ms
+[I 140424 11:59:24 web:1635] 304 GET /static/css/bootstrap.min.css?v=35fc838ce584c1eb81b3bebe245442d6 (192.168.11.207) 11.38ms
+[I 140424 11:59:24 web:1635] 304 GET /static/css/style.css?v=cae179ee550ce6579f5840f852f59dfe (192.168.11.207) 1.02ms
+[I 140424 11:59:24 web:1635] 304 GET /static/js/jquery.min.js?v=e6661cd3c4bc60b03deade3f51f2b3c6 (192.168.11.207) 1.16ms
+[I 140424 11:59:24 web:1635] 304 GET /static/js/bootstrap.min.js?v=353240ad37d1b084a53b1575f8ce57da (192.168.11.207) 0.90ms
+[I 140424 11:59:24 web:1635] 304 GET /static/js/bootstrap.file-input.js?v=e585107983524b88cb88f4d8429b70ae (192.168.11.207) 0.78ms
+[I 140424 11:59:33 web:1635] 200 POST /review (192.168.11.207) 99.61ms
+[I 140424 12:00:21 web:1635] 200 POST /review (192.168.11.207) 2077.05ms
+[I 140424 12:02:07 web:1635] 200 POST /review (192.168.11.207) 1963.28ms
+[I 140424 12:02:40 autoreload:186] /root/yeq/soft/SQL_Review/controllers/Review.py modified; restarting server
+[E 140424 12:02:59 web:1228] Uncaught exception POST /review (192.168.11.207)
+    HTTPRequest(protocol='http', host='192.168.22.225:3000', method='POST', uri='/review', version='HTTP/1.1', remote_ip='192.168.11.207', headers={'Origin': 'http://192.168.22.225:3000', 'Content-Length': '32742', 'Accept-Language': 'zh-CN,zh;q=0.8,en;q=0.6', 'Accept-Encoding': 'gzip,deflate,sdch', 'Host': '192.168.22.225:3000', 'Accept': 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8', 'User-Agent': 'Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/34.0.1847.116 Safari/537.36', 'Connection': 'keep-alive', 'Referer': 'http://192.168.22.225:3000/review', 'Cache-Control': 'max-age=0', 'Cookie': '__utma=115224007.1620756413.1398155325.1398155325.1398155325.1; __utmc=115224007; __utmz=115224007.1398155325.1.1.utmcsr=(direct)|utmccn=(direct)|utmcmd=(none)', 'Content-Type': 'multipart/form-data; boundary=----WebKitFormBoundaryTv6expRFq76mhi4O'})
+    Traceback (most recent call last):
+      File "/usr/lib/python2.6/site-packages/tornado/web.py", line 1141, in _when_complete
+        callback()
+      File "/usr/lib/python2.6/site-packages/tornado/web.py", line 1162, in _execute_method
+        self._when_complete(method(*self.path_args, **self.path_kwargs),
+      File "/root/yeq/soft/SQL_Review/controllers/Review.py", line 111, in post
+        ReviewPart.ReviewPart().review_table(db,tb)
+      File "/root/yeq/soft/SQL_Review/controllers/ReviewPart.py", line 31, in review_table
+        if tb_info[0][4]  in tableRules['engine']:
+    IndexError: list index out of range
+[E 140424 12:02:59 web:1635] 500 POST /review (192.168.11.207) 1115.87ms
+[I 140424 12:03:51 autoreload:186] /root/yeq/soft/SQL_Review/controllers/Review.py modified; restarting server
+ERROR at line 1: Failed to open file '/root/yeq/soft/SQL_Review/tmp/tusimodify.sql20140424120351', error: 2
+[I 140424 12:03:55 web:1635] 200 POST /review (192.168.11.207) 97.43ms
+[I 140424 12:03:55 web:1635] 304 GET /static/css/bootstrap.min.css?v=35fc838ce584c1eb81b3bebe245442d6 (192.168.11.207) 11.28ms
+[I 140424 12:03:55 web:1635] 304 GET /static/css/style.css?v=cae179ee550ce6579f5840f852f59dfe (192.168.11.207) 0.86ms
+[I 140424 12:03:55 web:1635] 304 GET /static/js/jquery.min.js?v=e6661cd3c4bc60b03deade3f51f2b3c6 (192.168.11.207) 1.40ms
+[I 140424 12:03:55 web:1635] 304 GET /static/js/bootstrap.min.js?v=353240ad37d1b084a53b1575f8ce57da (192.168.11.207) 0.93ms
+[I 140424 12:03:55 web:1635] 304 GET /static/js/bootstrap.file-input.js?v=e585107983524b88cb88f4d8429b70ae (192.168.11.207) 0.82ms
+[I 140424 12:04:02 web:1635] 200 POST /review (192.168.11.207) 2024.88ms
+[I 140424 12:04:06 web:1635] 200 POST /review (192.168.11.207) 1660.52ms
+[I 140424 12:06:03 web:1635] 200 POST /review (192.168.11.207) 1928.50ms
+[I 140424 12:06:22 web:1635] 304 GET /rule (192.168.11.207) 16.82ms
+[I 140424 12:06:23 web:1635] 200 GET /review (192.168.11.207) 15.58ms
+[I 140424 12:06:24 web:1635] 304 GET / (192.168.11.207) 13.36ms
+[I 140424 12:06:24 web:1635] 304 GET /review (192.168.11.207) 14.76ms
+[I 140424 12:06:25 web:1635] 304 GET /rule (192.168.11.207) 16.63ms
+[I 140424 12:06:50 web:1635] 304 GET /review (192.168.11.207) 16.11ms
+[I 140424 12:06:52 web:1635] 200 POST /review (192.168.11.207) 145.66ms
+[I 140424 12:07:43 autoreload:186] /root/yeq/soft/SQL_Review/controllers/Review.py modified; restarting server
+[I 140424 12:07:50 web:1635] 200 POST /review (192.168.11.207) 2089.36ms
+ERROR 1064 (42000) at line 1 in file: '/root/yeq/soft/SQL_Review/tmp/xtj-table-data-xiaomi.txt20140424120743': You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'INSERT INTO tb_xtj_corp_activity
+(`id`,`corp_id`, `start_date`,`end_date` ,`crea' at line 8
+[I 140424 12:08:30 web:1635] 200 POST /review (192.168.11.207) 276.43ms
+[I 140424 12:08:41 web:1635] 200 POST /review (192.168.11.207) 1697.85ms
