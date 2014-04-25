@@ -15,11 +15,12 @@ import shutil
 reload(sys)
 sys.setdefaultencoding("utf8")
 
+now = time.localtime()
+str_now = time.strftime("%Y%m%d%H%M%S", now )
+
 info = []
 review_status = 0
 
-now = time.localtime()
-str_now = time.strftime("%Y%m%d%H%M%S", now )
 
 class LoadAndClean():
 	def find_Load(self,tmpfile):
@@ -55,6 +56,7 @@ class Review(tornado.web.RequestHandler):
 		review_status_info = 0
                 upload_path = os.path.join(os.path.dirname(__file__),'../tmp')  
 		info = []
+		dbTmpName = 'DB_TMP'+str_now
 		try:
                 	file_metas = self.request.files['file']   
 		except Exception,ex:
@@ -75,7 +77,7 @@ class Review(tornado.web.RequestHandler):
                                                 ReviewPart.ReviewPart().review_table(db,tb)
                                                 ReviewPart.ReviewPart().review_column(db,tb)
 						ReviewPart.ReviewPart().review_extra(db,tb)
-						LoadAndClean().dropTmpDB(db)
+		#				LoadAndClean().dropTmpDB(db)
                                         rs_info = MySQL.MysqlQuery().query_select('select tb_name,tb_col,result from DB_REVIEW_CONTROL.tb_review_result where id > %s' %(max_id))
                                         if rs_info:
 						review_status = 2
@@ -115,6 +117,7 @@ class Review(tornado.web.RequestHandler):
 					if rs_info:
 						review_status = 2
 						info = rs_info
+						print info
 					else:
 						review_status = 1
 				else:
